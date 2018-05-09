@@ -54,12 +54,12 @@
                         loop: false,
                         showCursor: false,
                     });
-                }, 1500);
+                }, 500);
 
             },
         });
 
-    }, 700);
+    }, 1100);
 
     //back home
     $('#typed, .page-nav-banner, .our-solution-btn').click(function () {
