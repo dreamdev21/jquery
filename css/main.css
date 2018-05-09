@@ -204,8 +204,8 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 .center-menu-logo{
-    width: 267px;
-    height: 267px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     position: absolute;
     z-index: 2;
@@ -249,19 +249,19 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.8;
 }
 .center-menu-icon1{
-    top: -40px;
+    top: -30px;
     left: 50%;
     margin-left: -150px;
 }
 
 .center-menu-icon2{
-    bottom: 0;
+    bottom: 30px;
     left: 0;
     background-color: #23a9d8;
 }
 
 .center-menu-icon3{
-    bottom: 0;
+    bottom: 30px;
     right: 0;
     background-color: #4ec6c6;
 }
@@ -1181,10 +1181,10 @@ visibility: visible
     #typed4{width: 60%}
     #product{overflow-y: auto;overflow-x: hidden;box-sizing: content-box !important;}
 
-    .center-menu-logo, .center-menu-icon{width: 230px; height: 230px;}
-    .center-menu-icon1 { top: 20px; margin-left: -115px; }
-    .center-menu-icon2 { bottom: 50px; left: 70px;}
-    .center-menu-icon3 { bottom: 50px; right: 80px; }
+    .center-menu-logo, .center-menu-icon{width: 200px; height: 200px;}
+    .center-menu-icon1 { top: 40px; margin-left: -115px; }
+    .center-menu-icon2 { bottom: 90px; left: 70px;}
+    .center-menu-icon3 { bottom: 90px; right: 70px; }
     .main-right h1{    font-size: 5.3rem; line-height: 5.3rem;}
     .bubble{margin-top: 100px;}
     #contact, #digital, #enterprise, #about, #product, #product.active{overflow: auto; min-height: 600px;}
@@ -1207,10 +1207,11 @@ visibility: visible
     .center-menu-icon2, .center-menu-icon3{line-height: 240px;}
     #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{bottom: -180px;}
     .page-nav-banner, .center-menu-icon{height: 240px; width: 240px;}
-    .center-menu-logo, .center-menu-icon{width: 230px; height: 230px;}
-    .center-menu-icon1 { top: 20px; margin-left: -115px; }
-    .center-menu-icon2 { bottom: 50px; left: 70px;}
-    .center-menu-icon3 { bottom: 50px; right: 80px; }
+    .center-menu-logo{width: 200px; height: 200px;}
+    .center-menu-icon{width: 230px; height: 230px;}
+    .center-menu-icon1 { top: 40px; margin-left: -115px; }
+    .center-menu-icon2 { bottom: 90px; left: 70px;}
+    .center-menu-icon3 { bottom: 90px; right: 70px; }
 }
 
 
