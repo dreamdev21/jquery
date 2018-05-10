@@ -497,6 +497,7 @@
         ($(window).width() > 960) ? _x_ = 180 : _x_ = 85;
         var h_count = Math.ceil((width / (2 * _x_)));
         var v_count = Math.ceil((height - offsetTop) / _x_) * 2;
+        console.log(h_count,v_count);
         // temp: count of bubble in each row, flag: 1/-1
         var temp1 = 0,
             flag1 = -1;
@@ -569,9 +570,9 @@
 
         // clone exact position, overlay of Object
         var _id;
-        (viewport == 'l') ? _id = 8 : _id = 10; 
+        (viewport == 'l') ? _id = 8 : _id = 10;
         var _id2;
-        (viewport == 'l') ? _id2 = 44 : _id2 = 11; 
+        (viewport == 'l') ? _id2 = 44 : _id2 = 11;
         var _id3;
         (viewport == 'l') ? _id3 = 0 : _id3 = 12;
         var _id4;
