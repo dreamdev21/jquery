@@ -491,23 +491,25 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     border-radius: 100px;
     position: absolute;
-    left: 0;
+    left: auto;
+    right:0;
     /*background-color: rgba(45, 96, 112,0.7);*/
     background-color: rgba(255,255,255,0.7);
     top: 0;
-    padding-left: 190px;
+    padding-right: 190px;
     opacity: 0;
     color: black;
     visibility: hidden;
     transition: .3s;
     transform: scale(0.5);
-    text-align: left;
+    text-align: right;
     font-size: 20px;
     /*display: flex;*/
     align-items: center;
     transform-origin: left center;
-    padding-right: 20px;
+    padding-left: 20px;
     overflow-y: auto;
+    z-index: 1000;
 }
 .digital-hover-panel::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
@@ -536,12 +538,13 @@ h1, h2, h3, h4, h5, h6 {
     padding: 15px 10px;
 }
 .open-hover-left .digital-hover-panel{
-    left: auto;
-    right:0 ;
-    text-align: right;
+    left: 0;
+    right: auto;
+    text-align: left;
     transform-origin: right center;
-    padding-left: 20px;
-    padding-right: 190px;
+    padding-right: 20px;
+    padding-left: 190px;
+    z-index: 1000;
 }
 .dbubble.active .digital-hover-panel, .pbubble.active .digital-hover-panel, .bubble-wrap2 .abubble.active .digital-hover-panel, #about .bubble-wrap .abubble.preactive .digital-hover-panel{
     opacity: 1;
