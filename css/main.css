@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 20%;
 }
 .main-center{
-    width: 60%;
+    width: 100%;
     text-align: center;
     z-index: 9;
 }
