@@ -1142,7 +1142,7 @@ visibility: visible
 .page-nav-banner, .center-menu-icon{text-transform: capitalize}
 .page-nav-banner{z-index: 999}
 #contact .bubble_contact img.non_active{display: none;}
-#digital .bubble-wrap, #enterprise .bubble-wrap{ bottom: -90px;}
+#digital .bubble-wrap, #enterprise .bubble-wrap{ top: 420px;}
 .center-menu{visibility: visible !important}
 #product.active{overflow: hidden}
 .pbubble .digital-hover-panel > div, .abubble .digital-hover-panel > div, .digital-hover-panel div{font-size: 16px; line-height: 20px;}
