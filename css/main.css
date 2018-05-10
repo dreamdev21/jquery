@@ -101,11 +101,16 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
 }
 .main-right{
+    /*width: 20%;*/
+    /*text-align: center;*/
+    /*height: 90%;*/
+    /*margin-right: 50px;*/
+    /*z-index: 9;
+    */
+    position: relative;
+    top: -357px;
+    right: 0;
     width: 20%;
-    text-align: center;
-    height: 100%;
-    margin-right: 50px;
-    z-index: 9;
 }
 .main-center{
     width: 60%;
@@ -128,6 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #typed2{
     transform: rotate(90deg) translateX(100%);
+
 }
 .main-right h1{
     font-size:7rem;
@@ -146,7 +152,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     width: 78px;
     margin: 0 auto;
-    left: -16px;
+    /*left: -16px;*/
+    right: 15px;
+    top: 15px;
 }
 .about-link:hover{
     color: #fff;
@@ -1177,7 +1185,7 @@ visibility: visible
 {
     #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{   overflow: hidden; bottom: -300px; min-height: 600px; top: auto}
     #typed3, #typed4, #typed5 { width: 50%; margin: 0 auto; font-size: 30px; font-weight: bold; text-align: center; margin-top: 180px; line-height: 36px; }
-    .main-right{margin-right: 30px;}
+    .main-right{margin-right: 40px;}
     #typed4{width: 60%}
     #product{overflow-y: auto;overflow-x: hidden;box-sizing: content-box !important;}
 
@@ -1202,7 +1210,8 @@ visibility: visible
 }
 @media only screen and (min-width:1400px) and (max-width:1660px)
 {
-    .main-right h1 {font-size: 5.5rem;line-height: 4rem;}
+    .main-right h1 {font-size: 5rem;line-height: 4rem;position: relative;
+        left: 100px;}
     .center-menu-icon{align-items: baseline; line-height: 210px;}
     .center-menu-icon2, .center-menu-icon3{line-height: 240px;}
     #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{bottom: -180px;}
@@ -1212,9 +1221,43 @@ visibility: visible
     .center-menu-icon1 { top: 40px; margin-left: -115px; }
     .center-menu-icon2 { bottom: 90px; left: 70px;}
     .center-menu-icon3 { bottom: 90px; right: 70px; }
+    .about-link{
+        position: relative;
+        text-align: center;
+        width: 78px;
+        margin: 0 auto;
+        /*left: -16px;*/
+        right: 15px;
+        top: 100px;
+    }
 }
 
-
+@media only screen and (min-width:1200px) and (max-width:1400px){
+    .main-right h1 {font-size: 4.5rem;line-height: 4rem;position: relative;
+        left: 124px;}
+    .about-link{
+        position: relative;
+        text-align: center;
+        width: 78px;
+        margin: 0 auto;
+        /*left: -16px;*/
+        right: 15px;
+        top: 110px;
+    }
+}
+@media only screen and (min-width:1024px) and (max-width:1200px){
+    .main-right h1 {font-size: 4.5rem;line-height: 4rem;position: relative;
+        left: 124px;}
+    .about-link{
+        position: relative;
+        text-align: center;
+        width: 78px;
+        margin: 0 auto;
+        /*left: -16px;*/
+        right: 15px;
+        top: 110px;
+    }
+}
 @media only screen and (min-width:1440px) and (max-width:1660px)
 {
     #abubble144, #abubble145, #abubble146, #abubble147, #abubble148, #abubble149, #abubble150, #abubble151, #abubble152, #tbubble157, #tbubble158, #tbubble159, #tbubble160, #tbubble161, #nbubble167, #nbubble168, #nbubble169, #nbubble170, #nbubble171, #nbubble172{display: block;}
