@@ -83,7 +83,7 @@
                 if($(window).width() > 1200) {
                     $('.main-right h1').animate({fontSize: "7rem"}, 1000);
                 }
-               
+
 
                 $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
                 $('body').removeClass('contact_active');
@@ -564,7 +564,7 @@
         // bubble index
         var b_index = 0;
         // calculate row index
-        for (var i = 0; i <= h_count; i++) {
+        for (var i = 0; i <= 2; i++) {
             // position for each bubble
             var p_x1 = 0,
                 p_x2 = 0,
