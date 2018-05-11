@@ -84,7 +84,7 @@
                 $('.center-menu-icon1').css("transform", "rotate(0deg)");
                 $('.center-menu-icon2').css("transform", "rotate(0deg)");
                 $('.center-menu-icon3').css("transform", "rotate(0deg)");
-            }, 1000);
+            }, 1200);
 
             $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
             $('body').removeClass('contact_active');
