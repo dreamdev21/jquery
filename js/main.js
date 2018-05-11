@@ -66,6 +66,7 @@
         if($(this).hasClass('about_btn')){
             $('#about').toggleClass('open_nav');
         }else{
+            $('.center-menu').css('animation-name','');
             setTimeout(function () {
                 $('.main-center').stop().animate({
                     "height": "-100%",
