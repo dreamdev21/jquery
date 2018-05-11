@@ -791,7 +791,7 @@ h1, h2, h3, h4, h5, h6 {
 .info-container .text {
     position: absolute;
     z-index: 15;
-    left: -450px;
+    left: -230px;
     top: 100px;
     display: flex;
     width: 600px;
@@ -847,7 +847,7 @@ height: 5px;
     background-color: rgba(255,255,255,0.85);
     height: 180px;
     border-radius: 180px;
-    width: 602px;
+    width: 802px;
     position: absolute;
     left: 0;
     top: 0;
@@ -859,22 +859,22 @@ height: 5px;
 }
 .info-container .info-hover-panel.i-hover-panel1{
     top: 0;
-    left: -542px;
+    left: -459px;
 }
 .info-container .info-hover-panel.i-hover-panel2{
-    left: -368px;
+    left: -302px;
     top: 90px
 }
 .info-container .info-hover-panel.i-hover-panel3{
-    left: -542px;
+    left: -459px;
     top: 180px;
 }
 .info-container .info-hover-panel.i-hover-panel4{
-    left: -368px;
+    left: -302px;
     top: 270px;
 }
 .info-container .info-hover-panel.i-hover-panel5{
-    left: -542px;
+    left: -459px;
     top: 360px;
 }
 .info-container.active .i-hover-panel1{
