@@ -66,49 +66,94 @@
         if($(this).hasClass('about_btn')){
             $('#about').toggleClass('open_nav');
         }else{
-            $('.center-menu').css('animation-name','');
-            setTimeout(function () {
-                $('.main-center').stop().animate({
-                    "height": "-100%",
-                    "z-index": 1
+            if($(this).hasClass('our-solution-btn')){
+                $('.center-menu').css('display','block');
+                setTimeout(function () {
+                    $('.center-menu').css({ 'right': '', 'left': '-650px' }).animate({
+                        'left' : '-15px'
+                    },500);
+                    $('.about-link').css({ 'top': '-200px', 'left': '0px' }).animate({
+                        'top' : '-15px',
+                        'left' : '0px',
+                        'width' : '78px',
+                        'height' : '78px'
+                    },500);
+                }, 1500);
+
+                if($(window).width() > 1200) {
+                    $('.main-right h1').animate({fontSize: "7rem"}, 1000);
+                }
+               
+
+                $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
+                $('body').removeClass('contact_active');
+                $(".page-nav-banner.sub-button").removeClass('active');
+                $('.main-section').removeClass('inner_page')
+
+                setTimeout(function () {
+                    $('.main-left').stop().animate({
+                        "height": "140px",
+                        "padding-left": "20px",
+                        "z-index": 9
+                    }, 500, "easeOutSine",function(){
+                        $(".bubble").removeClass('animated');
+                        $('.bubble').removeAttr('style');
+                        $(".bubble").remove();
+                    });
+                    $('.main-center').stop().delay(500).fadeIn(500);
+                    $('.main-center, #typed2, .about-link').stop().delay(500).fadeIn(500);
+                }, 400);
+
+                $('.main-left').removeClass('hidden')
+                $('#about').removeClass('open_nav');
+                $('.our-solution-btn').removeClass('active');
+                $('#typed').fadeIn();
+            }else{
+                $('.center-menu').css('animation-name','');
+                setTimeout(function () {
+                    $('.main-center').stop().animate({
+                        "height": "-100%",
+                        "z-index": 1
+                    }, 500);
                 }, 500);
-            }, 500);
-            if($(window).width() > 1200) {
-                $('.main-right h1').animate({fontSize: "7rem"}, 1000);
+                if($(window).width() > 1200) {
+                    $('.main-right h1').animate({fontSize: "7rem"}, 1000);
+                }
+                $('.center-menu-icon1').css("visibility", "visible");
+                $('.center-menu-icon2').css("visibility", "visible");
+                $('.center-menu-icon3').css("visibility", "visible");
+                setTimeout(function () {
+                    $('.center-menu-circle').css("transform", "translate(-50%,-50%) rotate(0)");
+                    $('.center-menu-icon1').css("transform", "rotate(0deg)");
+                    $('.center-menu-icon2').css("transform", "rotate(0deg)");
+                    $('.center-menu-icon3').css("transform", "rotate(0deg)");
+                }, 1200);
+
+                $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
+                $('body').removeClass('contact_active');
+                $(".page-nav-banner.sub-button").removeClass('active');
+                $('.main-section').removeClass('inner_page')
+
+                setTimeout(function () {
+                    $('.main-left').stop().animate({
+                        "height": "140px",
+                        "padding-left": "20px",
+                        "z-index": 9
+                    }, 500, "easeOutSine",function(){
+                        $(".bubble").removeClass('animated');
+                        $('.bubble').removeAttr('style');
+                        $(".bubble").remove();
+                    });
+                    $('.main-center').stop().delay(500).fadeIn(500);
+                    $('.main-center, #typed2, .about-link').stop().delay(500).fadeIn(500);
+                }, 400);
+
+                $('.main-left').removeClass('hidden')
+                $('#about').removeClass('open_nav');
+                $('.our-solution-btn').removeClass('active');
+                $('#typed').fadeIn();
             }
-            $('.center-menu-icon1').css("visibility", "visible");
-            $('.center-menu-icon2').css("visibility", "visible");
-            $('.center-menu-icon3').css("visibility", "visible");
-            setTimeout(function () {
-                $('.center-menu-circle').css("transform", "translate(-50%,-50%) rotate(0)");
-                $('.center-menu-icon1').css("transform", "rotate(0deg)");
-                $('.center-menu-icon2').css("transform", "rotate(0deg)");
-                $('.center-menu-icon3').css("transform", "rotate(0deg)");
-            }, 1200);
 
-            $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
-            $('body').removeClass('contact_active');
-            $(".page-nav-banner.sub-button").removeClass('active');
-            $('.main-section').removeClass('inner_page')
-
-            setTimeout(function () {
-                $('.main-left').stop().animate({
-                    "height": "140px",
-                    "padding-left": "20px",
-                    "z-index": 9
-                }, 500, "easeOutSine",function(){
-                    $(".bubble").removeClass('animated');
-                    $('.bubble').removeAttr('style');
-                    $(".bubble").remove();
-                });
-                $('.main-center').stop().delay(500).fadeIn(500);
-                $('.main-center, #typed2, .about-link').stop().delay(500).fadeIn(500);
-            }, 400);
-
-            $('.main-left').removeClass('hidden')
-            $('#about').removeClass('open_nav');
-            $('.our-solution-btn').removeClass('active');
-            $('#typed').fadeIn();
 
         }
 
@@ -472,9 +517,21 @@
 
     //   about
     $('#about-btn').click(function () {
-        $('.main-center').fadeOut(500);
-        $('.main-section').addClass('inner_page')
-        $('.main-center, .about-link').fadeOut(500);
+
+        // setTimeout(function () {
+            $('.center-menu').css({ 'right': '', 'left': '0px' }).animate({
+                'left' : '-650px'
+            },500);
+            $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
+                'top' : '-200px',
+                'left' : '-670px',
+                'width': '300px',
+                'height': '300px'
+            },200);
+
+        // $('.main-center').fadeOut(500);
+        $('.main-section').addClass('inner_page');
+
         $('#typed').fadeOut();
         $('.main-left').stop().animate({
             "height": "100%",
@@ -646,6 +703,9 @@
             $('#about .bubble.wow').css("visibility", "hidden");
             $('#about .wow').removeClass('animated');
             new WOW().init();
+            $('.center-menu').css("display", "none");
+            $('.center-menu').css('animation-name','zoomOut');
+            $('.center-menu').css('animation-name','');
             $(".sub-button1").addClass("active");
         }, 1000);
 
