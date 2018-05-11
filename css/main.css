@@ -502,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
     visibility: hidden;
     transition: .3s;
     transform: scale(0.5);
-    text-align: right;
+    text-align: -webkit-right;
     font-size: 20px;
     /*display: flex;*/
     align-items: center;
@@ -550,6 +550,12 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     transform: scale(1);
     visibility: visible;
+    display: table;
+    vertical-align: middle;
+}
+.digital-hover-panel div{
+    display: table-cell;
+    vertical-align: middle;
 }
 .bubble-wrap .abubble.active {
     /*transform: scale(1.2);*/
@@ -777,6 +783,7 @@ h1, h2, h3, h4, h5, h6 {
     visibility: initial;
     transform: scale(1);
     z-index: 0;
+    display: table;
 }
 .nbubble .digital-hover-panel > div{
     padding: 20px;
