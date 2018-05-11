@@ -62,6 +62,17 @@
     }, 1100);
 
     //back home
+
+    $('.page-nav-banner').hover(function () {
+        if ($(this).hasClass('about_btn')) {
+            $('#about').toggleClass('open_nav');
+        }
+    });
+    $('.page-nav-banner').mouseout(function () {
+        if ($(this).hasClass('about_btn')) {
+            $('#about').removeClass('open_nav');
+        }
+    });
     $('#typed, .page-nav-banner, .our-solution-btn').click(function () {
         if($(this).hasClass('about_btn')){
             $('#about').toggleClass('open_nav');
@@ -132,7 +143,7 @@
                 $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
                 $('body').removeClass('contact_active');
                 $(".page-nav-banner.sub-button").removeClass('active');
-                $('.main-section').removeClass('inner_page')
+                $('.main-section').removeClass('inner_page');
 
                 setTimeout(function () {
                     $('.main-left').stop().animate({
