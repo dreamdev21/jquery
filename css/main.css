@@ -544,7 +544,7 @@ h1, h2, h3, h4, h5, h6 {
     transform-origin: right center;
     padding-right: 20px;
     padding-left: 190px;
-    z-index: 1000;
+    /*z-index: 1000;*/
 }
 .dbubble.active .digital-hover-panel, .pbubble.active .digital-hover-panel, .bubble-wrap2 .abubble.active .digital-hover-panel, #about .bubble-wrap .abubble.preactive .digital-hover-panel{
     opacity: 1;

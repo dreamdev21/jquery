@@ -709,29 +709,54 @@
             $(".sub-button1").addClass("active");
         }, 1000);
 
-        $(".abubble", "#about .bubble-wrap2").on("click", function() {
-            var $this = $(this);
-            var position = $this.position();
-            var width_ = ($(window).width() / 2);
-            if($(this).hasClass("active"))
-            {
-                $(this).removeClass("active");
-                if($(window).width() < 768)
-                    $('.bubble-wrap2').css({transform:"translateX(0px)"});
-            }
-            else
-            {
-                $(".abubble").removeClass("active");
-                $(this).addClass("active"); 
-                if($(window).width() < 768)
-                    if(position.left < width_){
-                        $('.bubble-wrap2').css({transform:"translateX("+width_ / 2+"px)"});
-                    }
-                    else{
-                        $('.bubble-wrap2').css({transform:"translateX(-"+width_ / 2+"px)"});
-                    }
-            }
+        $(".abubble", "#about .bubble-wrap2")
+            .on("mouseover", function() {
+                var $this = $(this);
+                var position = $this.position();
+                var width_ = ($(window).width() / 2);
+                if($(this).hasClass("active"))
+                {
+                    $(this).removeClass("active");
+                    if($(window).width() < 768)
+                        $('.bubble-wrap2').css({transform:"translateX(0px)"});
+                }
+                else
+                {
+                    $(".abubble").removeClass("active");
+                    $(this).addClass("active");
+                    if($(window).width() < 768)
+                        if(position.left < width_){
+                            $('.bubble-wrap2').css({transform:"translateX("+width_ / 2+"px)"});
+                        }
+                        else{
+                            $('.bubble-wrap2').css({transform:"translateX(-"+width_ / 2+"px)"});
+                        }
+                }
         });
+        $(".abubble", "#about .bubble-wrap2")
+            .on("mouseout", function() {
+                var $this = $(this);
+                var position = $this.position();
+                var width_ = ($(window).width() / 2);
+                if($(this).hasClass("active"))
+                {
+                    $(this).removeClass("active");
+                    if($(window).width() < 768)
+                        $('.bubble-wrap2').css({transform:"translateX(0px)"});
+                }
+                else
+                {
+                    $(".abubble").removeClass("active");
+                    $(this).addClass("active");
+                    if($(window).width() < 768)
+                        if(position.left < width_){
+                            $('.bubble-wrap2').css({transform:"translateX("+width_ / 2+"px)"});
+                        }
+                        else{
+                            $('.bubble-wrap2').css({transform:"translateX(-"+width_ / 2+"px)"});
+                        }
+                }
+            });
 
         $(".bubble-wrap .abubble").on("mouseover", function(){
             if(!$(this).hasClass("active"))
