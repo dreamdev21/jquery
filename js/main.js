@@ -79,21 +79,22 @@
         }else{
             if($(this).hasClass('our-solution-btn')){
                 $('.center-menu').css('display','block');
+                $('.about-link').css('display','block');
                 setTimeout(function () {
-                    $('.center-menu').css({ 'right': '', 'left': '-650px' }).animate({
-                        'left' : '-15px'
+                    // $('.about-link').css('display','block');
+                    if($(window).width() > 1200) {
+                        $('.main-right h1').animate({fontSize: "7rem"}, 2000);
+                    }
+                    $('.center-menu').css({ 'right': '', 'left': '-672px' }).animate({
+                        'left' : '0px'
                     },500);
                     $('.about-link').css({ 'top': '-200px', 'left': '0px' }).animate({
-                        'top' : '-15px',
-                        'left' : '0px',
+                        'top' : '0px',
+                        'left' : '-16px',
                         'width' : '78px',
                         'height' : '78px'
                     },500);
-                }, 1500);
-
-                if($(window).width() > 1200) {
-                    $('.main-right h1').animate({fontSize: "7rem"}, 1000);
-                }
+                }, 800);
 
 
                 $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
@@ -530,16 +531,25 @@
     $('#about-btn').click(function () {
 
         // setTimeout(function () {
-            $('.center-menu').css({ 'right': '', 'left': '0px' }).animate({
-                'left' : '-650px'
-            },500);
-            $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
-                'top' : '-200px',
-                'left' : '-670px',
-                'width': '300px',
-                'height': '300px'
-            },200);
+        $('.center-menu').css({ 'right': '', 'left': '0px' }).animate({
+            'left' : '-650px'
+        },500);
+        $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
+            'top' : '-150px',
+            'left' : '-672px',
+            'width': '300px',
+            'height': '300px'
+        },200);
 
+        if($(window).width() > 1200) {
+            $('.main-right h1').animate({
+                fontSize: "5.5rem"
+            }, 500);
+        }
+        setTimeout(function () {
+            $('.about-link').css('display', 'none');
+
+        },600);
         // $('.main-center').fadeOut(500);
         $('.main-section').addClass('inner_page');
 
