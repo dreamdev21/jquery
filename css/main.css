@@ -1226,8 +1226,11 @@ visibility: visible
 
     .center-menu-logo, .center-menu-icon{width: 200px; height: 200px;}
     .center-menu-icon1 { top: 40px; margin-left: -115px; }
+    .center-menu-icon1 span{line-height: 2rem;margin-top: 70px;}
     .center-menu-icon2 { bottom: 90px; left: 70px;}
+    .center-menu-icon2 span{line-height: 2rem;margin-top: 100px;}
     .center-menu-icon3 { bottom: 90px; right: 70px; }
+    .center-menu-icon3 span{line-height: 2rem;margin-top: 115px;}
     .main-right h1{    font-size: 5.3rem; line-height: 5.3rem;}
     .bubble{margin-top: 100px;}
     #contact, #digital, #enterprise, #about, #product, #product.active{overflow: auto; min-height: 600px;}
@@ -1264,6 +1267,10 @@ visibility: visible
         left: -16px;
         right: 15px;
         top: 100px;
+    }
+    .page-nav-banner{
+        padding-bottom: 40px;
+        font-size: 18px;
     }
 }
 
