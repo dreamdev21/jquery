@@ -637,7 +637,12 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 15;
     opacity:0; visibility:hidden; transition:0.8s ease all; -webkit-transition:0.8s ease all; -moz-transition:0.8s ease all; -o-transition:0.8s ease all;
 }
-.our-solution-btn.active{opacity:1; visibility:visible}
+.our-solution-btn.active{
+    opacity:1;
+    visibility:visible;
+    background-image: url(../images/logo.svg);
+    background-size: cover;
+}
 .product-hover-panel{
     background-color: rgba(255,255,255,0.85);
     height: 180px;
@@ -1191,6 +1196,7 @@ visibility: visible
 #digital .page-nav-banner{
     background: #00adba;
     text-align: -webkit-center;
+
 }
 #product .page-nav-banner{
     background: #4ec6c6;
@@ -1269,7 +1275,7 @@ visibility: visible
         text-align: center;
         width: 78px;
         margin: 0 auto;
-        /*left: -16px;*/
+        left: -16px;
         right: 15px;
         top: 110px;
     }
@@ -1442,6 +1448,22 @@ visibility: visible
     /* Enterprise css */
     .main-left.hidden{display: none;}
     /*.hover-svg,.bubble{width: 90px; height: 90px;}*/
+}
+@media only screen and (max-width:1024px)
+{
+    #enterprise .page-nav-banner{
+        line-height: 1rem;
+    }
+    #digital .page-nav-banner{
+        line-height: 1rem;
+    }
+    #product .page-nav-banner{
+        line-height: 1rem;
+    }
+    .center-menu-icon1, .center-menu-icon2, .center-menu-icon3{
+        line-height: 1rem;
+    }
+
 }
 @media only screen and (max-width:321px){
     #job-form .contact-form{ margin-top: 180px; }
