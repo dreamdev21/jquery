@@ -293,14 +293,14 @@
             for (var j = 0; j < temp1 + 6; j++) {
                 // calculate each bubble's Y position
                 p_y = offsetTop1 + _x_ * j;
-                $("#digital .bubble-wrap").append("<div id='bubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;left:" + p_x1 + "px;top:" + p_y + "px;'></div>");
+                $("#digital .bubble-wrap").append("<div id='bubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;background:#EAEAEA70;left:" + p_x1 + "px;top:" + p_y + "px;'></div>");
                 b_index++;
             }
             // draw bubbles for each row
             for (var j = 0; j < temp2 + 6; j++) {
                 // calculate each bubble's Y position
                 p_y = offsetTop2 + _x_ * j;
-                $("#digital .bubble-wrap").append("<div id='bubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;left:" + p_x2 + "px;top:" + p_y + "px'></div>");
+                $("#digital .bubble-wrap").append("<div id='bubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;background:#EAEAEA70;left:" + p_x2 + "px;top:" + p_y + "px'></div>");
                 b_index++;
             }
         }
@@ -445,14 +445,14 @@
             for (var j = 0; j < temp1 + 6; j++) {
                 // calculate each bubble's Y position
                 p_y = offsetTop1 + _x_ * j;
-                $("#enterprise .bubble-wrap").append("<div id='ebubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;left:" + p_x1 + "px;top:" + p_y + "px;'></div>");
+                $("#enterprise .bubble-wrap").append("<div id='ebubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;background:#EAEAEA70;left:" + p_x1 + "px;top:" + p_y + "px;'></div>");
                 b_index++;
             }
             // draw bubbles for each row
             for (var j = 0; j < temp2 + 6; j++) {
                 // calculate each bubble's Y position
                 p_y = offsetTop2 + _x_ * j;
-                $("#enterprise .bubble-wrap").append("<div id='ebubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;left:" + p_x2 + "px;top:" + p_y + "px'></div>");
+                $("#enterprise .bubble-wrap").append("<div id='ebubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;background:#EAEAEA70;left:" + p_x2 + "px;top:" + p_y + "px'></div>");
                 b_index++;
             }
         }
@@ -979,14 +979,14 @@
             for (var j = 0; j < temp1 + 5; j++) {
                 // calculate each bubble's Y position
                 p_y = offsetTop1 + _x_ * j;
-                $("#product .bubble-wrap").append("<div id='pbubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;left:" + p_x1 + "px;top:" + p_y + "px;'></div>");
+                $("#product .bubble-wrap").append("<div id='pbubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;background:#EAEAEA70;left:" + p_x1 + "px;top:" + p_y + "px;'></div>");
                 b_index++;
             }
             // draw bubbles for each row
             for (var j = 0; j < temp2 + 5; j++) {
                 // calculate each bubble's Y position
                 p_y = offsetTop2 + _x_ * j;
-                $("#product .bubble-wrap").append("<div id='pbubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;left:" + p_x2 + "px;top:" + p_y + "px'></div>");
+                $("#product .bubble-wrap").append("<div id='pbubble" + b_index + "' data-wow-duration='0." + (b_index + 0.70) + "s' class='bubble wow zoomIn' style='position:absolute;background:#EAEAEA70;left:" + p_x2 + "px;top:" + p_y + "px'></div>");
                 b_index++;
             }
         }

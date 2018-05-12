@@ -930,13 +930,13 @@ height: 5px;
     top: -200%;
 }
 #bubble-i-6, #bubble-i-0, #bubble-i-7, #bubble-i-1{
-    background: #E0E21A;
+    background: #E0E21A !important;
 }
 #ebubble-i-6, #ebubble-i-0, #ebubble-i-7, #ebubble-i-1{
-    background: #194D9B;
+    background: #194D9B !important;
 }
 #pbubble-i-0, #pbubble-i-1, #pbubble-i-5, #pbubble-i-6, #pbubble-i-7{
-    background: #04B3E4;
+    background: #04B3E4 !important;
 }
 /*.product-hover-icon:hover .product-hover-panel{
 opacity: 1;
