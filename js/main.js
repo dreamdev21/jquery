@@ -327,7 +327,7 @@
         setTimeout(function () {
             if (window.type3) window.type3.destroy();
             window.type3 = new Typed('#typed3', {
-                strings: ['Our mission is to DEMYSTIFY DIGITAL! Our team of experts believe that great digital marketing should be simple, reactive, cost effective and fun.'],
+                strings: ['Our missions is to demystify digital!'],
                 typeSpeed: 40,
                 loop: false,
                 showCursor: false,
@@ -479,7 +479,7 @@
             // reinitialize the Typed animation on EnterPrise
             if (window.type4) window.type4.destroy();
             window.type4 = new Typed('#typed4', {
-                strings: ['To provide simple, cost effective technical solutions to clients’ complex business challenges.'],
+                strings: ['Simple, cost effective technical solutions for complex business challenges.'],
                 typeSpeed: 40,
                 loop: false,
                 showCursor: false,
@@ -1016,7 +1016,7 @@
         setTimeout(function () {
             if (window.type5) window.type5.destroy();
             window.type5 = new Typed('#typed5', {
-                strings: ['Empowering teams globally to collaborate on projects, giving them secure access to creative tools and files in the office, on the go and helping them to protect their brand.'],
+                strings: ['Empowering teams globally to collaborate on projects.'],
                 typeSpeed: 40,
                 loop: false,
                 showCursor: false,
