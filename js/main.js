@@ -78,7 +78,10 @@
             $('#about').toggleClass('open_nav');
         }else{
             if($(this).hasClass('our-solution-btn')){
-                $('.center-menu').css('display','block');
+                setTimeout(function () {
+                    $('.center-menu').css('display','block');
+                },100);
+
                 $('.center-menu').css('animation-name','zoomIn');
                 $('.about-link').css('display','block');
 
@@ -90,13 +93,16 @@
                     $('.center-menu').css({ 'right': '', 'left': '-'+(width/2-150)+'px' }).animate({
                         'left' : '0px'
                     },500);
-                    $('.about-link').css({ 'top': '-200px', 'left': '0px' }).animate({
+                }, 800);
+                setTimeout(function () {
+                    var width = $(window).width();
+                    $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
                         'top' : '0px',
                         'left' : '-16px',
                         'width' : '78px',
                         'height' : '78px'
-                    },500);
-                }, 800);
+                    },300);
+                }, 500);
 
 
                 $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
@@ -552,10 +558,10 @@
         },500);
         $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
             'top' : '-150px',
-            'left' : '-672px',
+            'left' : '-'+(width/2-150)+'px',
             'width': '300px',
             'height': '300px'
-        },200);
+        },600);
 
         if($(window).width() > 1200) {
             $('.main-right h1').animate({
@@ -564,7 +570,7 @@
         }
         setTimeout(function () {
             $('.about-link').css('display', 'none');
-        },600);
+        },800);
 
         // $('.main-center').fadeOut(500);
         $('.main-section').addClass('inner_page');
@@ -577,7 +583,10 @@
         }, 500);
 
         $('#about').addClass('active');
-        $('.our-solution-btn').addClass('active');
+        setTimeout(function () {
+            $('.our-solution-btn').addClass('active');
+        },800);
+
         $("#about").scrollTop(0);
 
         var width = $(window).width();
