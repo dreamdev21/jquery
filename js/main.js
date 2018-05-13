@@ -78,7 +78,6 @@
             $('#about').toggleClass('open_nav');
         }else{
             if($(this).hasClass('our-solution-btn')){
-
                 $('.center-menu').css('display','block');
                 $('.center-menu').css('animation-name','zoomIn');
                 $('.about-link').css('display','block');
@@ -566,6 +565,7 @@
         setTimeout(function () {
             $('.about-link').css('display', 'none');
         },600);
+
         // $('.main-center').fadeOut(500);
         $('.main-section').addClass('inner_page');
 
@@ -739,14 +739,16 @@
         setTimeout(function () {
             $('#about .bubble.wow').css("visibility", "hidden");
             $('#about .wow').removeClass('animated');
-
+            $('.center-menu').css('animation-name','zoomOut');
             $('.center-menu-icon1').removeClass('wow zoomIn');
             $('.center-menu-icon2').removeClass('wow zoomIn');
             $('.center-menu-icon3').removeClass('wow zoomIn');
             new WOW().init();
-            // $('.center-menu').css("display", "none");
+            $('.center-menu').css('animation-name','zoomOut');
+            setTimeout(function () {
+                $('.center-menu').css("display", "none");
+            },1000);
 
-            // $('.center-menu').css('animation-name','');
             $(".sub-button1").addClass("active");
         }, 1000);
 
