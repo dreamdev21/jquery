@@ -138,7 +138,7 @@
                         });
                 }, 500);
                 if($(window).width() > 1200) {
-                    $('.main-right h1').animate({fontSize: "7rem"}, 1000);
+                    $('.main-right h1').animate({fontSize: "5.5rem"}, 1000);
                 }
                 $('.center-menu-icon1').css("visibility", "visible");
                 $('.center-menu-icon2').css("visibility", "visible");
