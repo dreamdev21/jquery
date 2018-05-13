@@ -78,14 +78,17 @@
             $('#about').toggleClass('open_nav');
         }else{
             if($(this).hasClass('our-solution-btn')){
+
                 $('.center-menu').css('display','block');
+                $('.center-menu').css('animation-name','zoomIn');
                 $('.about-link').css('display','block');
                 setTimeout(function () {
                     // $('.about-link').css('display','block');
                     if($(window).width() > 1200) {
                         $('.main-right h1').animate({fontSize: "7rem"}, 2000);
                     }
-                    $('.center-menu').css({ 'right': '', 'left': '-672px' }).animate({
+                    var width = $(window).width();
+                    $('.center-menu').css({ 'right': '', 'left': '-'+(width/2-150)+'px' }).animate({
                         'left' : '0px'
                     },500);
                     $('.about-link').css({ 'top': '-200px', 'left': '0px' }).animate({
@@ -531,8 +534,9 @@
     $('#about-btn').click(function () {
 
         // setTimeout(function () {
+        var width = $(window).width();
         $('.center-menu').css({ 'right': '', 'left': '0px' }).animate({
-            'left' : '-650px'
+            'left' : '-'+(width/2-150)+'px'
         },500);
         $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
             'top' : '-150px',
@@ -548,7 +552,9 @@
         }
         setTimeout(function () {
             $('.about-link').css('display', 'none');
-
+            // $('.center-menu-icon1').css("visibility", "hidden");
+            // $('.center-menu-icon2').css("visibility", "hidden");
+            // $('.center-menu-icon3').css("visibility", "hidden");
         },600);
         // $('.main-center').fadeOut(500);
         $('.main-section').addClass('inner_page');
@@ -723,10 +729,17 @@
         setTimeout(function () {
             $('#about .bubble.wow').css("visibility", "hidden");
             $('#about .wow').removeClass('animated');
-            new WOW().init();
-            $('.center-menu').css("display", "none");
             $('.center-menu').css('animation-name','zoomOut');
-            $('.center-menu').css('animation-name','');
+            // $('.center-menu-icon1').css('animation-name','zoomOut');
+            // $('.center-menu-icon2').css('animation-name','zoomOut');
+            // $('.center-menu-icon3').css('animation-name','zoomOut');
+            setTimeout(function () {
+                $('.center-menu').css("display", "none")
+            },1000);
+            new WOW().init();
+            // $('.center-menu').css("display", "none");
+
+            // $('.center-menu').css('animation-name','');
             $(".sub-button1").addClass("active");
         }, 1000);
 
