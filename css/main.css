@@ -1254,7 +1254,7 @@ visibility: visible
         left: 100px;}
     .center-menu-icon{align-items: baseline; line-height: 210px;}
     .center-menu-icon2, .center-menu-icon3{line-height: 240px;}
-    #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{bottom: -180px;}
+    #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{bottom: 420px;}
     .page-nav-banner, .center-menu-icon{height: 240px; width: 240px;}
     .center-menu-logo{width: 200px; height: 200px;}
     .center-menu-icon{width: 230px; height: 230px;}
