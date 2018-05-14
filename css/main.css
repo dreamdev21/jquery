@@ -1410,7 +1410,10 @@ visibility: visible
 
     .page-nav-banner{width: 140px; height: 140px; font-size: 14px; padding-bottom: 20px;}
     .page-nav-banner.sub-button{ height: 200px; width: 140px; font-size: 13px;}
-    .digital-hover-panel{background: #fff}
+    /*.digital-hover-panel{background: #fff}*/
+    .dbubble.active .digital-hover-panel, .pbubble.active .digital-hover-panel, .bubble-wrap2 .abubble.active .digital-hover-panel, #about .bubble-wrap .abubble.preactive .digital-hover-panel{
+        display: block;
+    }
     #about .bubble_container{ display: none;}
     #about .bubble.active .digital-hover-panel{opacity: 1; visibility: visible; transform: scale(1)}
     #about .bubble-wrap{margin-top: 115px;}
