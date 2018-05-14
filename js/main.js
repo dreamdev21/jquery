@@ -4,7 +4,7 @@
     "use strict";
 
     new WOW().init();
-
+    $("a").removeAttr("href");
     $(".form-control").click(function () {
         $(this).parent('.form-group').addClass('active');
     });
@@ -46,6 +46,7 @@
             loop: false,
             showCursor: false,
             onComplete: function () {
+                $('.contact-link').html('<span>Contact</span>');
                 $('.contact-link').addClass('active');
                 setTimeout(function () {
                     var typed = new Typed('#typed', {
@@ -86,8 +87,11 @@
                 $('.about-link').css('display','block');
 
                 setTimeout(function () {
-                    if($(window).width() > 1200) {
+                    if($(window).width() > 1660) {
                         $('.main-right h1').animate({fontSize: "7rem"}, 2000);
+                    }
+                    if($(window).width() > 1200 && $(window).width() <= 1660) {
+                        $('.main-right h1').animate({fontSize: "5.5rem"}, 2000);
                     }
                     var width = $(window).width();
                     $('.center-menu').css({ 'right': '', 'left': '-'+(width/2-150)+'px' }).animate({
@@ -96,12 +100,28 @@
                 }, 800);
                 setTimeout(function () {
                     var width = $(window).width();
-                    $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
-                        'top' : '0px',
-                        'left' : '-16px',
-                        'width' : '78px',
-                        'height' : '78px'
-                    },300);
+                    if(width > 1660){
+                        $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
+                            'top' : '0px',
+                            'left' : '-16px',
+                            'width' : '78px',
+                            'height' : '78px'
+                        },300);
+                    }else if(width > 1024 && width <= 1600){
+                        $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
+                            'top' : '100px',
+                            'left' : '-16px',
+                            'width' : '78px',
+                            'height' : '78px'
+                        },300);
+                    }else{
+                        $('.about-link').css({ 'top': '-200px', 'left': '0px' }).animate({
+                            'top' : '55%',
+                            'left': '0px',
+                            'width' : '48px',
+                            'height' : '48px'
+                        },300);
+                    }
                 }, 500);
 
 
@@ -196,24 +216,45 @@
 
     //    contact link
     $('.contact-link').click(function () {
-        $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
-        $('.main-center').stop().fadeOut(500);
-        $('.main-center, #typed2, .about-link').stop().fadeOut(500);
-        $('.main-left').stop().animate({
-            "height": "100%",
-            "padding-left": "20px",
-            "z-index": 9
-        }, 500);
+        if($('#contact').hasClass('active')){
+            $('.contact-link').html('<span>Contact</span>');
+            $('#contact').addClass('active');
+            setTimeout(function () {
+                $('.main-center').stop().fadeIn(1500);
+            },500);
 
-        $('#contact').addClass('active');
-        $('body').addClass('contact_active');
-        $('#contact .bubble.wow').css("visibility", "hidden");
+            $('#typed2, .about-link').stop().fadeIn(500);
+            $('.main-left').stop().animate({
+                "height": "140px",
+                "padding-left": "20px",
+                "z-index": 9
+            }, 500);
 
-        setTimeout(function () {
-            $('#contact .wow').removeClass('animated');
-            $('#contact .wow').removeAttr('style');
-            new WOW().init();
-        }, 800);
+            $('#contact').removeClass('active');
+            $('body').removeClass('contact_active');
+
+        }else{
+            $('.contact-link').html('<span>Back</span>');
+            $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
+            $('.main-center').stop().fadeOut(500);
+            $('.main-center, #typed2, .about-link').stop().fadeOut(500);
+            $('.main-left').stop().animate({
+                "height": "100%",
+                "padding-left": "20px",
+                "z-index": 9
+            }, 500);
+
+            $('#contact').addClass('active');
+            $('body').addClass('contact_active');
+            $('#contact .bubble.wow').css("visibility", "hidden");
+
+            setTimeout(function () {
+                $('#contact .wow').removeClass('animated');
+                $('#contact .wow').removeAttr('style');
+                new WOW().init();
+            }, 800);
+
+        }
 
     });
 
@@ -557,12 +598,23 @@
         $('.center-menu').css({ 'right': '', 'left': '0px' }).animate({
             'left' : '-'+(width/2-150)+'px'
         },500);
-        $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
-            'top' : '-150px',
-            'left' : '-'+(width/2-150)+'px',
-            'width': '300px',
-            'height': '300px'
-        },600);
+
+
+        if($(window).width() > 1024) {
+            $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
+                'top' : '-150px',
+                'left' : '-'+(width/2-150)+'px',
+                'width': '300px',
+                'height': '300px'
+            },600);
+        }else{
+            $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
+                'top' : '-150px',
+                'left' : '0px',
+                'width': '300px',
+                'height': '300px'
+            },600);
+        }
 
         if($(window).width() > 1200) {
             $('.main-right h1').animate({

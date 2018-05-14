@@ -789,6 +789,9 @@ h1, h2, h3, h4, h5, h6 {
     visibility: initial;
     transform: scale(1);
 }
+a, a label {
+    cursor: pointer;
+}
 .nbubble {
     transform: all 0.6s ease-out;
 }
