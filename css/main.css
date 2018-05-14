@@ -290,6 +290,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     position: relative;
 }
+.bubble-wrap{
+    margin-top: 350px;
+}
 .bubble-wrap2{
     margin-top: 350px;
 }
@@ -1167,8 +1170,8 @@ visibility: visible
 #about .bubble-wrap .digital-hover-icon span img{max-width: 80%; margin: 0 auto}
 .abubble {visibility: visible !important;}
 .abubble .digital-hover-icon{visibility: visible !important;}
-#about .bubble-wrap{top: 420px;}
-#about .bubble-wrap2, #about .bubble-wrap3{top: 420px;}
+/*#about .bubble-wrap{top: 420px;}*/
+/*#about .bubble-wrap2, #about .bubble-wrap3{top: 420px;}*/
 #about .bubble-wrap .abubble.preactive .digital-hover-panel{z-index: 9}
 .abubble.preactive span{ z-index: 99}
 .page-nav-banner, .center-menu-icon{text-transform: capitalize}
