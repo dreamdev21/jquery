@@ -290,8 +290,11 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     position: relative;
 }
-.bubble-wrap2,  .bubble-wrap3{
+.bubble-wrap2{
     margin-top: 350px;
+}
+.bubble-wrap3{
+    /*margin-top: 350px;*/
 }
 #product .bubble-wrap{
     height:70%;
@@ -1164,7 +1167,8 @@ visibility: visible
 #about .bubble-wrap .digital-hover-icon span img{max-width: 80%; margin: 0 auto}
 .abubble {visibility: visible !important;}
 .abubble .digital-hover-icon{visibility: visible !important;}
-#about .bubble-wrap, #about .bubble-wrap2, #about .bubble-wrap3{top: 420px;}
+#about .bubble-wrap{top: 420px;}
+#about .bubble-wrap2, #about .bubble-wrap3{top: 100px;}
 #about .bubble-wrap .abubble.preactive .digital-hover-panel{z-index: 9}
 .abubble.preactive span{ z-index: 99}
 .page-nav-banner, .center-menu-icon{text-transform: capitalize}
@@ -1226,7 +1230,9 @@ visibility: visible
 
 @media only screen and (min-width:1025px) and (max-width:1660px)
 {
-    #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{   overflow: hidden; bottom: -300px; min-height: 600px; top: auto}
+    #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{   overflow: hidden;
+        /*bottom: -300px; */
+        min-height: 600px; top: auto}
     #typed3, #typed4, #typed5 { width: 100%; margin: 0 auto; font-size: 30px; font-weight: bold; text-align: center; margin-top: 180px; line-height: 36px; }
     .main-right{margin-right: 40px;}
     #typed4{width: 100%}
@@ -1260,7 +1266,7 @@ visibility: visible
         left: 100px;}
     .center-menu-icon{align-items: baseline; line-height: 210px;}
     .center-menu-icon2, .center-menu-icon3{line-height: 240px;}
-    #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{bottom: 420px;}
+    /*#digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{bottom: 420px;}*/
     .page-nav-banner, .center-menu-icon{height: 240px; width: 240px;}
     .center-menu-logo{width: 200px; height: 200px;}
     .center-menu-icon{width: 230px; height: 230px;}
