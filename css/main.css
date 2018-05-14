@@ -290,15 +290,15 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     position: relative;
 }
-/*.bubble-wrap{*/
-    /*margin-top: 350px;*/
-/*}*/
-/*.bubble-wrap2{*/
-    /*margin-top: 180px;*/
-/*}*/
-/*.bubble-wrap3{*/
-    /*margin-top: 180px;*/
-/*}*/
+.bubble-wrap{
+    margin-top: 350px;
+}
+.bubble-wrap2{
+    margin-top: 180px;
+}
+.bubble-wrap3{
+    margin-top: 180px;
+}
 #product .bubble-wrap{
     height:70%;
     text-align: center;
