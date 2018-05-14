@@ -1255,7 +1255,7 @@ visibility: visible
     #abubble144, #abubble145, #abubble146, #abubble147, #abubble148, #abubble149, #abubble150, #abubble151, #abubble152, #tbubble157, #tbubble158, #tbubble159, #tbubble160, #tbubble161, #nbubble167, #nbubble168, #nbubble169, #nbubble170, #nbubble171, #nbubble172{display: none;}
     .center-menu-icon{align-items: baseline; line-height: 210px;}
     .center-menu-icon2, .center-menu-icon3{line-height: 240px;}
-    .page-nav-banner, .center-menu-icon{height: 230px; width: 230px;}
+    .page-nav-banner, .center-menu-icon{height: 230px; width: 230px;padding-bottom: 30px;}
     #about .page-nav-banner.sub-button{font-size: 1.3rem}
     /*#digital, #enterprise, #product{overflow-y: auto;}*/
     .page-nav-banner.sub-button.active{top: -20px;}

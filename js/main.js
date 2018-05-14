@@ -343,7 +343,7 @@
                 showCursor: false,
             });
         }, 100);
-
+        $('#bubble-i-1').css('display','none');
         setTimeout(function () {
             $('#digital .bubble.wow').css("visibility", "hidden");
             $('#digital .wow').removeClass('animated');
@@ -353,13 +353,14 @@
             $('.center-menu-icon3').removeClass('wow zoomIn');
 
             new WOW().init();
-
+            $('#bubble-i-1').css('display','block');
             setTimeout(function(){
                 $('#digital .bubble').each(function(){
                     if($(this).css('visibility') == 'hidden'){
                         $(this).addClass('mobile_hidden');
                     }
-                })
+                });
+
             },1000)
         }, 2000);
 
@@ -503,7 +504,7 @@
                 showCursor: false,
             });
         }, 100);
-
+        $('#ebubble-i-1').css('display','none');
         setTimeout(function () {
             $('#enterprise .bubble.wow').css("visibility", "hidden");
             $('#enterprise .wow').removeClass('animated');
@@ -511,7 +512,7 @@
             $('.center-menu-icon2').removeClass('wow zoomIn');
             $('.center-menu-icon3').removeClass('wow zoomIn');
             new WOW().init();
-
+            $('#ebubble-i-1').css('display','block');
             setTimeout(function(){
                 $('#enterprise .bubble').each(function(){
                     if($(this).css('visibility') == 'hidden'){
@@ -1058,12 +1059,15 @@
                 showCursor: false,
             });
         }, 100);
-
+        $('#pbubble-i-6').css('display','none');
+        $('#pbubble-i-7').css('display','none');
         setTimeout(function () {
             $(".page-nav-banner.sub-button", "#product").addClass('active');
             $('#product .bubble.wow').css("visibility", "hidden");
             $('#product .wow').removeClass('animated');
             new WOW().init();
+            $('#pbubble-i-6').css('display','block');
+            $('#pbubble-i-7').css('display','block');
             setTimeout(function(){
                 $('#product .bubble').each(function(){
                     if($(this).css('visibility') == 'hidden'){
