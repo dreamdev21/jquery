@@ -101,37 +101,38 @@
                     if($(window).width() > 1200 && $(window).width() <= 1660) {
                         $('.main-right h1').animate({fontSize: "5.5rem"}, 2000);
                     }
+
+                }, 800);
+                setTimeout(function () {
                     var width = $(window).width();
                     $('.center-menu').css({ 'right': '', 'left': '-'+(width/2-150)+'px' }).animate({
                         'left' : '0px'
                     },500);
-                }, 800);
-                setTimeout(function () {
-                    var width = $(window).width();
-                    if(width > 1660){
-                        $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
-                            'top' : '0px',
-                            'left' : '-16px',
-                            'width' : '78px',
-                            'height' : '78px'
-                        },300);
-                    }else if(width > 1024 && width <= 1600){
-                        $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
-                            'top' : '100px',
-                            'left' : '-16px',
-                            'width' : '78px',
-                            'height' : '78px'
-                        },300);
-                    }else{
-                        $('.about-link').css({ 'top': '-200px', 'left': '0px' }).animate({
-                            'top' : '55%',
-                            'left': '0px',
-                            'width' : '48px',
-                            'height' : '48px'
-                        },300);
-                    }
-                }, 500);
-
+                },100);
+                var width = $(window).width();
+                if(width > 1660){
+                    $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
+                        'top' : '0px',
+                        'left' : '-16px',
+                        'width' : '78px',
+                        'height' : '78px'
+                    },300);
+                }else if(width > 1024 && width <= 1600){
+                    $('.about-link').css({ 'top': '-200px', 'left': '-'+(width/2-150)+'px' }).animate({
+                        'top' : '100px',
+                        'left' : '-16px',
+                        'width' : '78px',
+                        'height' : '78px'
+                    },300);
+                }else{
+                    $('.about-link').css({ 'top': '-200px', 'left': '0px' }).animate({
+                        'top' : '55%',
+                        'left': '0px',
+                        'width' : '48px',
+                        'height' : '48px'
+                    },300);
+                }
+                $('.about-link').addClass('wow zoomIn');
 
                 $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
                 $('body').removeClass('contact_active');
@@ -411,6 +412,10 @@
         }, 2000);
         var service_click_flag = 0;
         $('.hover-svg').css('z-index','1000');
+        $("#bubble-i-6").html($("#svg-hover-1-title").html()).fadeIn();
+        $("#bubble-i-0").html($("#svg-hover-2-title").html()).fadeIn();
+        $("#bubble-i-7").html($("#svg-hover-3-title").html()).fadeIn();
+        $("#bubble-i-1").html($("#svg-hover-4-title").html()).fadeIn();
         $(".dbubble", "#digital").hover(function() {
             var $this = $(this);
             var position = $this.position();
@@ -440,12 +445,17 @@
         // service click animation
 
         $(".dbubble", "#digital").on("click", function() {
+
             var $this = $(this);
             var position = $this.position();
             var width_ = ($(window).width() / 2);
             var clickedid = $(this).attr('id');
             if($(window).width() > 768){
                 if(service_click_flag == 0){
+                    $("#bubble-i-6").html($("#svg-hover-1").html()).fadeIn();
+                    $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                    $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                    $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
                     $this.addClass('active');
                     setTimeout(function () {
                         $this.removeClass('active');
@@ -656,6 +666,10 @@
                     }
                     setTimeout(function () {
                         service_click_flag = 0;
+                        $("#bubble-i-6").html($("#svg-hover-1-title").html()).fadeIn();
+                        $("#bubble-i-0").html($("#svg-hover-2-title").html()).fadeIn();
+                        $("#bubble-i-7").html($("#svg-hover-3-title").html()).fadeIn();
+                        $("#bubble-i-1").html($("#svg-hover-4-title").html()).fadeIn();
                     }, 3000);
 
                 }
@@ -763,11 +777,11 @@
         $("#enterprise  #ebubble8").clone().attr("id", "ebubble-i-8").addClass("dbubble").appendTo("#enterprise .bubble-wrap").hide();
         $("#enterprise  #ebubble"+_id3).clone().attr("id", "ebubble-i-1").addClass("dbubble").addClass("open-hover-left").appendTo("#enterprise .bubble-wrap").hide();
 
-        $("#ebubble-i-6").html($("#svg-hover-e1").html()).fadeIn();
-        $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
-        $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
-        $("#ebubble-i-1").html($("#svg-hover-e4").html()).fadeIn();
-        $("#ebubble-i-8").html($("#svg-hover-e5").html()).fadeIn();
+        $("#ebubble-i-6").html($("#svg-hover-e1-title").html()).fadeIn();
+        $("#ebubble-i-0").html($("#svg-hover-e2-title").html()).fadeIn();
+        $("#ebubble-i-7").html($("#svg-hover-e3-title").html()).fadeIn();
+        $("#ebubble-i-1").html($("#svg-hover-e4-title").html()).fadeIn();
+        $("#ebubble-i-8").html($("#svg-hover-e5-title").html()).fadeIn();
 
         setTimeout(function () {
             // reinitialize the Typed animation on EnterPrise
@@ -832,6 +846,11 @@
             var clickedid = $(this).attr('id');
             if($(window).width() > 768){
                 if(service_enterprise_click_flag == 0){
+                    $("#ebubble-i-6").html($("#svg-hover-e1").html()).fadeIn();
+                    $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
+                    $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
+                    $("#ebubble-i-1").html($("#svg-hover-e4").html()).fadeIn();
+                    $("#ebubble-i-8").html($("#svg-hover-e5").html()).fadeIn();
                     $this.addClass('active');
                     setTimeout(function () {
                         $this.removeClass('active');
@@ -931,23 +950,23 @@
                             $('#ebubble-i-6').removeClass('active');
                         }, 600);
                         setTimeout(function () {
-                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
                             $('#ebubble-i-0').removeClass('active');
                         }, 700);
                         setTimeout(function () {
-                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
                             $('#ebubble-i-7').removeClass('active');
                         }, 800);
                         setTimeout(function () {
-                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $("#ebubble-i-1").html($("#svg-hover-e4").html()).fadeIn();
                             $('#ebubble-i-1').removeClass('active');
                         }, 900);
                         setTimeout(function () {
-                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $("#ebubble-i-8").html($("#svg-hover-e5").html()).fadeIn();
                             $('#ebubble-i-8').removeClass('active');
                         }, 1000);
                         setTimeout(function () {
-                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').html($("#svg-hover-e1").html()).fadeIn();
                             $('#ebubble-i-6').addClass('active');
                         }, 1600);
                         setTimeout(function () {
@@ -960,23 +979,23 @@
                         }, 600);
 
                         setTimeout(function () {
-                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
                             $('#ebubble-i-7').removeClass('active');
                         }, 700);
                         setTimeout(function () {
-                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $("#ebubble-i-1").html($("#svg-hover-e4").html()).fadeIn();
                             $('#ebubble-i-1').removeClass('active');
                         }, 800);
                         setTimeout(function () {
-                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $("#ebubble-i-8").html($("#svg-hover-e5").html()).fadeIn();
                             $('#ebubble-i-8').removeClass('active');
                         }, 900);
                         setTimeout(function () {
-                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').html($("#svg-hover-e1").html()).fadeIn();
                             $('#ebubble-i-6').removeClass('active');
                         }, 1000);
                         setTimeout(function () {
-                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
                             $('#ebubble-i-0').addClass('active');
                         }, 1600);
                         setTimeout(function () {
@@ -989,23 +1008,23 @@
                         }, 600);
 
                         setTimeout(function () {
-                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $("#ebubble-i-1").html($("#svg-hover-e4").html()).fadeIn();
                             $('#ebubble-i-1').removeClass('active');
                         }, 700);
                         setTimeout(function () {
-                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $("#ebubble-i-8").html($("#svg-hover-e5").html()).fadeIn();
                             $('#ebubble-i-8').removeClass('active');
                         }, 800);
                         setTimeout(function () {
-                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').html($("#svg-hover-e1").html()).fadeIn();
                             $('#ebubble-i-6').removeClass('active');
                         }, 900);
                         setTimeout(function () {
-                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
                             $('#ebubble-i-0').removeClass('active');
                         }, 1000);
                         setTimeout(function () {
-                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
                             $('#ebubble-i-7').addClass('active');
                         }, 1600);
                         setTimeout(function () {
@@ -1017,23 +1036,23 @@
                             $('#ebubble-i-1').removeClass('active');
                         }, 600);
                         setTimeout(function () {
-                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $("#ebubble-i-8").html($("#svg-hover-e5").html()).fadeIn();
                             $('#ebubble-i-8').removeClass('active');
                         }, 700);
                         setTimeout(function () {
-                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').html($("#svg-hover-e1").html()).fadeIn();
                             $('#ebubble-i-6').removeClass('active');
                         }, 800);
                         setTimeout(function () {
-                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
                             $('#ebubble-i-0').removeClass('active');
                         }, 900);
                         setTimeout(function () {
-                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
                             $('#ebubble-i-7').removeClass('active');
                         }, 1000);
                         setTimeout(function () {
-                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $("#ebubble-i-1").html($("#svg-hover-e4").html()).fadeIn();
                             $('#ebubble-i-1').addClass('active');
                         }, 1600);
                         setTimeout(function () {
@@ -1042,6 +1061,11 @@
                     }
                     setTimeout(function () {
                         service_enterprise_click_flag = 0;
+                        $("#ebubble-i-6").html($("#svg-hover-e1-title").html()).fadeIn();
+                        $("#ebubble-i-0").html($("#svg-hover-e2-title").html()).fadeIn();
+                        $("#ebubble-i-7").html($("#svg-hover-e3-title").html()).fadeIn();
+                        $("#ebubble-i-1").html($("#svg-hover-e4-title").html()).fadeIn();
+                        $("#ebubble-i-8").html($("#svg-hover-e5-title").html()).fadeIn();
                     }, 3000);
 
                 }
@@ -1081,15 +1105,15 @@
             $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
                 'top' : '-150px',
                 'left' : '-'+(width/2-150)+'px',
-                'width': '300px',
-                'height': '300px'
+                'width': '180px',
+                'height': '180px'
             },600);
         }else{
             $('.about-link').css({ 'right': '', 'left': '0px'  }).animate({
                 'top' : '-150px',
                 'left' : '0px',
-                'width': '300px',
-                'height': '300px'
+                'width': '180px',
+                'height': '180px'
             },600);
         }
 
@@ -1115,7 +1139,7 @@
         $('#about').addClass('active');
         setTimeout(function () {
             $('.our-solution-btn').addClass('active');
-        },800);
+        },600);
 
         $("#about").scrollTop(0);
 
@@ -1282,6 +1306,7 @@
             $('.center-menu-icon1').removeClass('wow zoomIn');
             $('.center-menu-icon2').removeClass('wow zoomIn');
             $('.center-menu-icon3').removeClass('wow zoomIn');
+            $('.about-link').removeClass('wow zoomIn');
             new WOW().init();
             $('.center-menu').css('animation-name','zoomOut');
             setTimeout(function () {
@@ -1289,7 +1314,7 @@
             },1000);
 
             $(".sub-button1").addClass("active");
-        }, 1000);
+        }, 200);
         var team_click_flag = 0;
         $(".abubble", "#about .bubble-wrap2")
             .on("mouseover", function() {
@@ -1707,11 +1732,11 @@
         $("#product  #pbubble"+_id3).clone().attr("id", "pbubble-i-7").addClass("pbubble").appendTo("#product .bubble-wrap").hide();
 
         // clone the content of Hover Panel
-        $("#pbubble-i-5").html($("#svg-hover-p1").html()).fadeIn();
-        $("#pbubble-i-6").html($("#svg-hover-p2").html()).fadeIn();
-        $("#pbubble-i-7").html($("#svg-hover-p3").html()).fadeIn();
-        $("#pbubble-i-0").html($("#svg-hover-p4").html()).fadeIn();
-        $("#pbubble-i-1").html($("#svg-hover-p5").html()).fadeIn();
+        $("#pbubble-i-5").html($("#svg-hover-p1-title").html()).fadeIn();
+        $("#pbubble-i-6").html($("#svg-hover-p2-title").html()).fadeIn();
+        $("#pbubble-i-7").html($("#svg-hover-p3-title").html()).fadeIn();
+        $("#pbubble-i-0").html($("#svg-hover-p4-title").html()).fadeIn();
+        $("#pbubble-i-1").html($("#svg-hover-p5-title").html()).fadeIn();
 
         setTimeout(function () {
             if (window.type5) window.type5.destroy();
@@ -1774,6 +1799,11 @@
             var clickedid = $(this).attr('id');
             if($(window).width() > 768){
                 if(service_product_click_flag == 0){
+                    $("#pbubble-i-5").html($("#svg-hover-p1").html()).fadeIn();
+                    $("#pbubble-i-6").html($("#svg-hover-p2").html()).fadeIn();
+                    $("#pbubble-i-7").html($("#svg-hover-p3").html()).fadeIn();
+                    $("#pbubble-i-0").html($("#svg-hover-p4").html()).fadeIn();
+                    $("#pbubble-i-1").html($("#svg-hover-p5").html()).fadeIn();
                     $this.addClass('active');
                     setTimeout(function () {
                         $this.removeClass('active');
@@ -2006,6 +2036,11 @@
                     
                     setTimeout(function () {
                         service_product_click_flag = 0;
+                        $("#pbubble-i-5").html($("#svg-hover-p1-title").html()).fadeIn();
+                        $("#pbubble-i-6").html($("#svg-hover-p2-title").html()).fadeIn();
+                        $("#pbubble-i-7").html($("#svg-hover-p3-title").html()).fadeIn();
+                        $("#pbubble-i-0").html($("#svg-hover-p4-title").html()).fadeIn();
+                        $("#pbubble-i-1").html($("#svg-hover-p5-title").html()).fadeIn();
                     },3000);
                 }
             }
