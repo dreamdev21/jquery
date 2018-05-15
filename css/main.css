@@ -588,10 +588,11 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 .bubble-wrap .abubble.active {
-    transform: scale(1.2);
+    transform: scale(1.1);
     /*left: 843px !important;*/
     top: 270px !important;
     z-index: 50;
+    border: 10px solid #1d4c9b;
 }
 .digital-hover-icon span{
     position: relative;
@@ -1170,8 +1171,13 @@ visibility: visible
 .client-container .client-hover-panel p b {font-weight: bold}
 .client-container .client-hover-panel blockquote:before {content:'"'}
 .client-container.text_container .client-hover-panel{background: transparent}
-.client-container.text_container .icon_content{border: 4px solid #ddd; border-radius: 50%; width: 80px; height: 80px; float: right; position: relative; top: -20px;}
+.client-container.text_container .icon_content{border-radius: 50%; width: 80px; height: 80px; float: right; position: relative; }
+.client-container.text_container .icon_content svg{
+    border-radius: 50%; width: 80px; height: 80px;background: whitesmoke;
+    border: solid 0px transparent;
+}
 .client-container.text_container .content_right .icon_content{float: left}
+
 .client-container .client-hover-panel.content_right .txt_blk{float: right; text-align: left;}
 .client-container .client-hover-panel.content_right .text_content{float: right}
 #about .bubble_container{visibility: hidden; opacity: 0}

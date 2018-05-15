@@ -1051,6 +1051,9 @@
                 setTimeout(function(){
                     $(".bubble-wrap .abubble.active").removeClass("active");
                 }, 300);
+                if($(this).hasClass('open-hover-left')){
+                    $(this).css('left',$(this).position().left - 180 + 'px');
+                }
                 // $('.bubble_container').removeClass('active');
                 if($(window).width() < 768)
                     $('.bubble-wrap').css({transform:"translateX(0px)"});
@@ -1064,6 +1067,9 @@
                 $(".bubble-wrap .abubble.active").removeClass("active");
                 $(".client-container","#about").addClass("active");
                 $(this).addClass("active");
+                if($(this).hasClass('open-hover-left')){
+                    $(this).css('left',$(this).position().left + 180 + 'px');
+                }
                 var ind_ = $(this).attr('id');
                 if($(window).width() < 768)
                     if(position.left < width_){
