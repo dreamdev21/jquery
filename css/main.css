@@ -100,6 +100,23 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: space-between;
 }
+.main-top-menu{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: rotate(90deg);
+    display: list-item;          /* This has to be "list-item"                                               */
+    list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
+    list-style-position: inside; /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position */
+
+}
+.main-top-menu.active{
+    display: none !important;
+}
+.maim-top-menu-parent1{
+
+}
 .main-right{
     /*width: 20%;*/
     /*text-align: center;*/
@@ -572,7 +589,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .bubble-wrap .abubble.active {
     transform: scale(1.2);
-    left: 843px !important;
+    /*left: 843px !important;*/
     top: 270px !important;
     z-index: 50;
 }
@@ -788,6 +805,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #1d4c9b70;
     visibility: initial;
     transform: scale(1);
+    color: #ffffff;
 }
 a, a label {
     cursor: pointer;

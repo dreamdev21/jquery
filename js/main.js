@@ -5,6 +5,14 @@
 
     new WOW().init();
     $("a").removeAttr("href");
+    $('.main-top-menu').click(function () {
+       var $this = $(this);
+       if($this.hasClass('active')){
+           $this.removeClass('active');
+       }else{
+           $this.addClass('active');
+       }
+    });
     $(".form-control").click(function () {
         $(this).parent('.form-group').addClass('active');
     });
