@@ -452,6 +452,7 @@
             var clickedid = $(this).attr('id');
             if($(window).width() > 768){
                 if(service_click_flag == 0){
+                    $('#digital').css('background','#ffffff50');
                     $("#bubble-i-6").html($("#svg-hover-1").html()).fadeIn();
                     $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
                     $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
@@ -670,6 +671,7 @@
                         $("#bubble-i-0").html($("#svg-hover-2-title").html()).fadeIn();
                         $("#bubble-i-7").html($("#svg-hover-3-title").html()).fadeIn();
                         $("#bubble-i-1").html($("#svg-hover-4-title").html()).fadeIn();
+                        $('#digital').css('background','');
                     }, 3000);
 
                 }
@@ -846,6 +848,7 @@
             var clickedid = $(this).attr('id');
             if($(window).width() > 768){
                 if(service_enterprise_click_flag == 0){
+                    $('#enterprise').css('background','#ffffff50');
                     $("#ebubble-i-6").html($("#svg-hover-e1").html()).fadeIn();
                     $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
                     $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
@@ -1066,6 +1069,7 @@
                         $("#ebubble-i-7").html($("#svg-hover-e3-title").html()).fadeIn();
                         $("#ebubble-i-1").html($("#svg-hover-e4-title").html()).fadeIn();
                         $("#ebubble-i-8").html($("#svg-hover-e5-title").html()).fadeIn();
+                        $('#enterprise').css('background','');
                     }, 3000);
 
                 }
@@ -1538,6 +1542,8 @@
             $(this).removeClass("preactive");
             if($(this).hasClass("active"))
             {
+                $('#about').css('background','linear-gradient(to bottom, rgba(235,235,235,1) 0%,rgba(255,255,255,0) 100%)');
+
                 setTimeout(function(){
                     $(".client-container","#about").removeClass("active");
                 }, 300);
@@ -1554,6 +1560,10 @@
             }
             else
             {
+                setTimeout(function () {
+                    $('#about').css('background','#ffffff50');
+                },500);
+
                 // Scroll To Relative position
                 if($(window).width() > 960){
                     $('#about').animate({scrollTop:$('#about .bubble-wrap').height()/2}, 400);
@@ -1597,6 +1607,7 @@
             $(this).removeClass("preactive");
             if($(this).hasClass("active"))
             {
+                $('#about').css('background','linear-gradient(to bottom, rgba(235,235,235,1) 0%,rgba(255,255,255,0) 100%)');
                 $(this).removeClass("active");
                 $(".info-container","#about").removeClass("active");
                 $(this).css('left',$(this).attr('data-nLeft')+"px");
@@ -1607,6 +1618,9 @@
             }
             else
             {
+                setTimeout(function () {
+                    $('#about').css('background','#ffffff50');
+                },500);
                 if($(window).width() > 960){
                     $('#about').animate({scrollTop: $('#about .bubble-wrap3').height()+$('#about .bubble-wrap2').height()+$('#about .bubble-wrap1').height()+350}, 400);
                 }
@@ -1635,6 +1649,7 @@
                         $('.bubble-wrap3 .info-container').css({transform:"translateX("+width_ / 2+"px)"});
                     }
                 }
+
             }
         });
         window.bwrap2 = $(".bubble-wrap2").position().top;
@@ -1799,6 +1814,7 @@
             var clickedid = $(this).attr('id');
             if($(window).width() > 768){
                 if(service_product_click_flag == 0){
+                    $('#product').css('background','#ffffff50');
                     $("#pbubble-i-5").html($("#svg-hover-p1").html()).fadeIn();
                     $("#pbubble-i-6").html($("#svg-hover-p2").html()).fadeIn();
                     $("#pbubble-i-7").html($("#svg-hover-p3").html()).fadeIn();
@@ -2041,6 +2057,7 @@
                         $("#pbubble-i-7").html($("#svg-hover-p3-title").html()).fadeIn();
                         $("#pbubble-i-0").html($("#svg-hover-p4-title").html()).fadeIn();
                         $("#pbubble-i-1").html($("#svg-hover-p5-title").html()).fadeIn();
+                        $('#product').css('background','');
                     },3000);
                 }
             }
