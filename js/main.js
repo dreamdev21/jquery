@@ -213,15 +213,13 @@
     /*about nav*/
     $('.sub-button1').click(function(){
         $('#about').animate({scrollTop:'0'},1000)
-    })
+    });
     $('.sub-button2').click(function(){
         $('#about').animate({scrollTop:$('#about .bubble-wrap').height()+340},1000)
-    })
-
+    });
     $('.sub-button3').click(function(){
         $('#about').animate({scrollTop:($('#about .bubble-wrap').height()+$('#about .bubble-wrap').height()+($('#about .bubble-wrap').height())/2)+200},1000)
-    })
-
+    });
     //    contact link
     $('.contact-link').click(function () {
         if($('#contact').hasClass('active')){
@@ -265,7 +263,6 @@
         }
 
     });
-
     //  find job
     $('#findJob').click(function () {
         $('#contact-form').stop().fadeOut(500);
@@ -285,8 +282,6 @@
     $(window).resize(function(){
         if (window.matchMedia("(orientation: landscape)").matches && win_wid < 1024) {viewport = 'l'}
     })
-
-
     //   digital
     $('#digital-btn').click(function () {
         // $('.main-center').stop().fadeOut(500);
@@ -415,6 +410,7 @@
             },1000)
         }, 2000);
         var service_click_flag = 0;
+        $('.hover-svg').css('z-index','1000');
         $(".dbubble", "#digital").hover(function() {
             var $this = $(this);
             var position = $this.position();
@@ -664,28 +660,9 @@
 
                 }
             }
-            // if($(this).hasClass("active"))
-            // {
-            //     $(this).removeClass("active");
-            //     if($(window).width() < 768)
-            //         $('.bubble-wrap').css({transform:"translateX(0px)"});
-            // }
-            // else
-            // {
-            //     $(".dbubble").removeClass("active");
-            //     $(this).addClass("active");
-            //     if($(window).width() < 768)
-            //         if(position.left < width_){
-            //             $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
-            //         }
-            //         else{
-            //             $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
-            //         }
-            // }
+
         });
     });
-
-
     //   enterprise
     $('#enterprise-btn').click(function () {
 
@@ -847,7 +824,7 @@
             }
 
         });
-
+        $('.hover-svg').css('z-index','1000');
         $(".dbubble", "#enterprise").on("click", function() {
             var $this = $(this);
             var position = $this.position();
@@ -1090,7 +1067,6 @@
         });
 
     });
-
     //   about
     $('#about-btn').click(function () {
 
@@ -1763,11 +1739,278 @@
                 })
             },1000)
         }, 2000);
+        var service_product_click_flag = 0;
+        $(".pbubble", "#product").hover(function() {
+            if(service_product_click_flag == 0){
+                var $this = $(this);
+                var position = $this.position();
+                var width_ = ($(window).width() / 2);
+                if($(this).hasClass("active"))
+                {
+                    $(this).removeClass("active");
+                    if($(window).width() < 768)
+                        $('.bubble-wrap').css({transform:"translateX(0px)"});
+                }
+                else
+                {
+                    $(".pbubble").removeClass("active");
+                    $(this).addClass("active");
+                    if($(window).width() < 768)
+                        if(position.left < width_){
+                            $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
+                        }
+                        else{
+                            $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
+                        }
+                }
+            }
 
+        });
+        $('.hover-svg').css('z-index','1000');
         $(".pbubble", "#product").on("click", function() {
             var $this = $(this);
             var position = $this.position();
             var width_ = ($(window).width() / 2);
+            var clickedid = $(this).attr('id');
+            if($(window).width() > 768){
+                if(service_product_click_flag == 0){
+                    $this.addClass('active');
+                    setTimeout(function () {
+                        $this.removeClass('active');
+                    },1000);
+
+                    if(clickedid == "pbubble-i-5"){
+                        setTimeout(function () {
+                            $('#pbubble-i-5').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-1-digital").html()).fadeIn();
+                            $('#pbubble-i-0').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#pbubble-i-6").html($("#svg-hover-2-digital").html()).fadeIn();
+                            $('#pbubble-i-6').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-3-digital").html()).fadeIn();
+                            $('#pbubble-i-1').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-4-digital").html()).fadeIn();
+                            $('#pbubble-i-7').addClass('active');
+                        },2100);
+                    }
+                    if(clickedid == "pbubble-i-0"){
+                        setTimeout(function () {
+                            $('#pbubble-i-0').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#pbubble-i-6").html($("#svg-hover-1-digital1").html()).fadeIn();
+                            $('#pbubble-i-6').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-2-digital1").html()).fadeIn();
+                            $('#pbubble-i-1').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-3-digital1").html()).fadeIn();
+                            $('#pbubble-i-7').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#pbubble-i-5").html($("#svg-hover-4-digital1").html()).fadeIn();
+                            $('#pbubble-i-5').addClass('active');
+                        },2100);
+                    }
+                    if(clickedid == "pbubble-i-6"){
+                        setTimeout(function () {
+                            $('#pbubble-i-6').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-1-digital1").html()).fadeIn();
+                            $('#pbubble-i-1').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-2-digital1").html()).fadeIn();
+                            $('#pbubble-i-7').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#pbubble-i-5").html($("#svg-hover-3-digital1").html()).fadeIn();
+                            $('#pbubble-i-5').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-4-digital1").html()).fadeIn();
+                            $('#pbubble-i-0').addClass('active');
+                        },2100);
+                    }
+                    if(clickedid == "pbubble-i-1"){
+                        setTimeout(function () {
+                            $('#pbubble-i-1').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-1-digital1").html()).fadeIn();
+                            $('#pbubble-i-7').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#pbubble-i-5").html($("#svg-hover-2-digital1").html()).fadeIn();
+                            $('#pbubble-i-5').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-3-digital1").html()).fadeIn();
+                            $('#pbubble-i-0').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#pbubble-i-6").html($("#svg-hover-4-digital1").html()).fadeIn();
+                            $('#pbubble-i-6').addClass('active');
+                        },2100);
+                    }
+                    if(clickedid == "pbubble-i-7"){
+                        setTimeout(function () {
+                            $('#pbubble-i-7').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#pbubble-i-5").html($("#svg-hover-1-digital1").html()).fadeIn();
+                            $('#pbubble-i-5').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-2-digital1").html()).fadeIn();
+                            $('#pbubble-i-0').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#pbubble-i-6").html($("#svg-hover-3-digital1").html()).fadeIn();
+                            $('#pbubble-i-6').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-4-digital1").html()).fadeIn();
+                            $('#pbubble-i-1').addClass('active');
+                        },2100);
+                    }
+                    setTimeout(function () {
+                        service_product_click_flag = 1;
+                    },3000);
+
+                }else{
+                    if (clickedid == "pbubble-i-5") {
+                        setTimeout(function () {
+                            $('#pbubble-i-5').removeClass('active');
+                        }, 600);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-p2").html()).fadeIn();
+                            $('#pbubble-i-0').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#pbubble-i-6").html($("#svg-hover-p3").html()).fadeIn();
+                            $('#pbubble-i-6').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-p4").html()).fadeIn();
+                            $('#pbubble-i-1').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-p5").html()).fadeIn();
+                            $('#pbubble-i-7').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $('#pbubble-i-5').html($("#svg-hover-p1").html()).fadeIn();
+                            $('#pbubble-i-5').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#pbubble-i-5').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "pbubble-i-0") {
+                        setTimeout(function () {
+                            $('#pbubble-i-0').removeClass('active');
+                        }, 600);
+
+                        setTimeout(function () {
+                            $("#pbubble-i-6").html($("#svg-hover-p3").html()).fadeIn();
+                            $('#pbubble-i-6').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-p4").html()).fadeIn();
+                            $('#pbubble-i-1').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-p5").html()).fadeIn();
+                            $('#pbubble-i-7').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $('#pbubble-i-5').html($("#svg-hover-p1").html()).fadeIn();
+                            $('#pbubble-i-5').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-p2").html()).fadeIn();
+                            $('#pbubble-i-0').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#pbubble-i-0').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "pbubble-i-7") {
+                        setTimeout(function () {
+                            $('#pbubble-i-7').removeClass('active');
+                        }, 600);
+
+                        setTimeout(function () {
+                            $("#pbubble-i-5").html($("#svg-hover-p4").html()).fadeIn();
+                            $('#pbubble-i-5').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-p5").html()).fadeIn();
+                            $('#pbubble-i-0').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $('#pbubble-i-6').html($("#svg-hover-p1").html()).fadeIn();
+                            $('#pbubble-i-6').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-p2").html()).fadeIn();
+                            $('#pbubble-i-1').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-p3").html()).fadeIn();
+                            $('#pbubble-i-7').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#pbubble-i-7').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "pbubble-i-1") {
+                        setTimeout(function () {
+                            $('#pbubble-i-1').removeClass('active');
+                        }, 600);
+                        setTimeout(function () {
+                            $("#pbubble-i-7").html($("#svg-hover-p5").html()).fadeIn();
+                            $('#pbubble-i-7').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $('#pbubble-i-5').html($("#svg-hover-p1").html()).fadeIn();
+                            $('#pbubble-i-5').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#pbubble-i-0").html($("#svg-hover-p2").html()).fadeIn();
+                            $('#pbubble-i-0').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#pbubble-i-6").html($("#svg-hover-p3").html()).fadeIn();
+                            $('#pbubble-i-6').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#pbubble-i-1").html($("#svg-hover-p4").html()).fadeIn();
+                            $('#pbubble-i-1').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#pbubble-i-1').removeClass('active');
+                        }, 2600);
+                    }
+                    
+                    setTimeout(function () {
+                        service_product_click_flag = 0;
+                    },3000);
+                }
+            }
+
+
             if($(this).hasClass("active"))
             {
                 $(this).removeClass("active");
@@ -1777,7 +2020,7 @@
             else
             {
                 $(".pbubble").removeClass("active");
-                $(this).addClass("active");  
+                $(this).addClass("active");
                 if($(window).width() < 768)
                     if(position.left < width_){
                         $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
