@@ -376,12 +376,14 @@
         $("#digital  #bubble"+_id2).clone().attr("id", "bubble-i-6").addClass("dbubble").appendTo("#digital .bubble-wrap").hide();
         $("#digital  #bubble"+_id).clone().attr("id", "bubble-i-0").addClass("dbubble").addClass("open-hover-left").appendTo("#digital .bubble-wrap").hide();
         $("#digital  #bubble7").clone().attr("id", "bubble-i-7").addClass("dbubble").appendTo("#digital .bubble-wrap").hide();
+        $("#digital  #bubble8").clone().attr("id", "bubble-i-8").addClass("dbubble").appendTo("#digital .bubble-wrap").hide();
         $("#digital  #bubble"+_id3).clone().attr("id", "bubble-i-1").addClass("dbubble").addClass("open-hover-left").appendTo("#digital .bubble-wrap").hide();
 
         $("#bubble-i-6").html($("#svg-hover-1").html()).fadeIn();
         $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
         $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
         $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
 
         setTimeout(function () {
             if (window.type3) window.type3.destroy();
@@ -412,29 +414,270 @@
 
             },1000)
         }, 2000);
+        var service_click_flag = 0;
+        $(".dbubble", "#digital").hover(function() {
+            var $this = $(this);
+            var position = $this.position();
+            var width_ = ($(window).width() / 2);
+            if(service_click_flag == 0 ){
+                if($(this).hasClass("active"))
+                {
+                    $(this).removeClass("active");
+                    if($(window).width() < 768)
+                        $('.bubble-wrap').css({transform:"translateX(0px)"});
+                }
+                else
+                {
+                    $(".dbubble").removeClass("active");
+                    $(this).addClass("active");
+                    if($(window).width() < 768)
+                        if(position.left < width_){
+                            $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
+                        }
+                        else{
+                            $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
+                        }
+                }
+            }
+        });
+
+        // service click animation
+
 
         $(".dbubble", "#digital").on("click", function() {
             var $this = $(this);
             var position = $this.position();
             var width_ = ($(window).width() / 2);
-            if($(this).hasClass("active"))
-            {
-                $(this).removeClass("active");
-                if($(window).width() < 768)
-                    $('.bubble-wrap').css({transform:"translateX(0px)"});
+            var clickedid = $(this).attr('id');
+            if(service_click_flag == 0){
+                $this.addClass('active');
+                setTimeout(function () {
+                    $this.removeClass('active');
+                },1000);
+                if(clickedid == "bubble-i-6"){
+                    setTimeout(function () {
+                        $('#bubble-i-6').addClass('active');
+                    },1600);
+                    setTimeout(function () {
+                        $("#bubble-i-0").html($("#svg-hover-1-digital").html()).fadeIn();
+                        $('#bubble-i-0').addClass('active');
+                    },1700);
+                    setTimeout(function () {
+                        $("#bubble-i-7").html($("#svg-hover-2-digital").html()).fadeIn();
+                        $('#bubble-i-7').addClass('active');
+                    },1800);
+                    setTimeout(function () {
+                        $("#bubble-i-1").html($("#svg-hover-3-digital").html()).fadeIn();
+                        $('#bubble-i-1').addClass('active');
+                    },1900);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-4-digital").html()).fadeIn();
+                        $('#bubble-i-8').addClass('active');
+                    },2100);
+                }
+                if(clickedid == "bubble-i-0"){
+                    setTimeout(function () {
+                        $('#bubble-i-0').addClass('active');
+                    },1600);
+                    setTimeout(function () {
+                        $("#bubble-i-7").html($("#svg-hover-1-digital1").html()).fadeIn();
+                        $('#bubble-i-7').addClass('active');
+                    },1700);
+                    setTimeout(function () {
+                        $("#bubble-i-1").html($("#svg-hover-2-digital1").html()).fadeIn();
+                        $('#bubble-i-1').addClass('active');
+                    },1800);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-3-digital1").html()).fadeIn();
+                        $('#bubble-i-8').addClass('active');
+                    },1900);
+                    setTimeout(function () {
+                        $("#bubble-i-6").html($("#svg-hover-4-digital1").html()).fadeIn();
+                        $('#bubble-i-6').addClass('active');
+                    },2100);
+                }
+                if(clickedid == "bubble-i-7"){
+                    setTimeout(function () {
+                        $('#bubble-i-7').addClass('active');
+                    },1600);
+
+                    setTimeout(function () {
+                        $("#bubble-i-1").html($("#svg-hover-2-digital2").html()).fadeIn();
+                        $('#bubble-i-1').addClass('active');
+                    },1700);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
+                        $('#bubble-i-8').addClass('active');
+                    },1800);
+                    setTimeout(function () {
+                        $("#bubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
+                        $('#bubble-i-6').addClass('active');
+                    },1900);
+                    setTimeout(function () {
+                        $("#bubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
+                        $('#bubble-i-0').addClass('active');
+                    },2000);
+                }
+                if(clickedid == "bubble-i-1"){
+                    setTimeout(function () {
+                        $('#bubble-i-1').addClass('active');
+                    },1600);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
+                        $('#bubble-i-8').addClass('active');
+                    },1700);
+                    setTimeout(function () {
+                        $("#bubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
+                        $('#bubble-i-6').addClass('active');
+                    },1800);
+                    setTimeout(function () {
+                        $("#bubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
+                        $('#bubble-i-0').addClass('active');
+                    },1900);
+                    setTimeout(function () {
+                        $("#bubble-i-7").html($("#svg-hover-5-digital2").html()).fadeIn();
+                        $('#bubble-i-7').addClass('active');
+                    },2000);
+                    setTimeout(function () {
+                        $('#bubble-i-1').addClass('active');
+                    },2600);
+                }
+                service_click_flag = 1;
+            }else{
+                if(clickedid == "bubble-i-6"){
+                    setTimeout(function () {
+                        $('#bubble-i-6').removeClass('active');
+                    },600);
+                    setTimeout(function () {
+                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                        $('#bubble-i-0').removeClass('active');
+                    },700);
+                    setTimeout(function () {
+                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                        $('#bubble-i-7').removeClass('active');
+                    },800);
+                    setTimeout(function () {
+                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                        $('#bubble-i-1').removeClass('active');
+                    },900);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                        $('#bubble-i-8').removeClass('active');
+                    },1000);
+                    setTimeout(function () {
+                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                        $('#bubble-i-6').addClass('active');
+                    },1600);
+                    setTimeout(function () {
+                        $('#bubble-i-6').removeClass('active');
+                    },2600);
+                }
+                if(clickedid == "bubble-i-0"){
+                    setTimeout(function () {
+                        $('#bubble-i-0').removeClass('active');
+                    },600);
+
+                    setTimeout(function () {
+                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                        $('#bubble-i-7').removeClass('active');
+                    },700);
+                    setTimeout(function () {
+                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                        $('#bubble-i-1').removeClass('active');
+                    },800);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                        $('#bubble-i-8').removeClass('active');
+                    },900);
+                    setTimeout(function () {
+                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                        $('#bubble-i-6').removeClass('active');
+                    },1000);
+                    setTimeout(function () {
+                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                        $('#bubble-i-0').addClass('active');
+                    },1600);
+                    setTimeout(function () {
+                        $('#bubble-i-0').removeClass('active');
+                    },2600);
+                }
+                if(clickedid == "bubble-i-7"){
+                    setTimeout(function () {
+                        $('#bubble-i-7').removeClass('active');
+                    },600);
+
+                    setTimeout(function () {
+                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                        $('#bubble-i-1').removeClass('active');
+                    },700);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                        $('#bubble-i-8').removeClass('active');
+                    },800);
+                    setTimeout(function () {
+                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                        $('#bubble-i-6').removeClass('active');
+                    },900);
+                    setTimeout(function () {
+                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                        $('#bubble-i-0').removeClass('active');
+                    },1000);
+                    setTimeout(function () {
+                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                        $('#bubble-i-7').addClass('active');
+                    },1600);
+                    setTimeout(function () {
+                        $('#bubble-i-7').removeClass('active');
+                    },2600);
+                }
+                if(clickedid == "bubble-i-1"){
+                    setTimeout(function () {
+                        $('#bubble-i-1').removeClass('active');
+                    },600);
+                    setTimeout(function () {
+                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                        $('#bubble-i-8').removeClass('active');
+                    },700);
+                    setTimeout(function () {
+                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                        $('#bubble-i-6').removeClass('active');
+                    },800);
+                    setTimeout(function () {
+                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                        $('#bubble-i-0').removeClass('active');
+                    },900);
+                    setTimeout(function () {
+                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                        $('#bubble-i-7').removeClass('active');
+                    },1000);
+                    setTimeout(function () {
+                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                        $('#bubble-i-1').addClass('active');
+                    },1600);
+                    setTimeout(function () {
+                        $('#bubble-i-1').removeClass('active');
+                    },2600);
+                }
+                service_click_flag = 0;
             }
-            else
-            {
-                $(".dbubble").removeClass("active");
-                $(this).addClass("active");
-                if($(window).width() < 768)
-                    if(position.left < width_){
-                        $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
-                    }
-                    else{
-                        $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
-                    }
-            }
+            // if($(this).hasClass("active"))
+            // {
+            //     $(this).removeClass("active");
+            //     if($(window).width() < 768)
+            //         $('.bubble-wrap').css({transform:"translateX(0px)"});
+            // }
+            // else
+            // {
+            //     $(".dbubble").removeClass("active");
+            //     $(this).addClass("active");
+            //     if($(window).width() < 768)
+            //         if(position.left < width_){
+            //             $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
+            //         }
+            //         else{
+            //             $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
+            //         }
+            // }
         });
     });
 
