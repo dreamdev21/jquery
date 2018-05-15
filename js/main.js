@@ -443,222 +443,226 @@
 
         // service click animation
 
-
         $(".dbubble", "#digital").on("click", function() {
             var $this = $(this);
             var position = $this.position();
             var width_ = ($(window).width() / 2);
             var clickedid = $(this).attr('id');
-            if(service_click_flag == 0){
-                $this.addClass('active');
-                setTimeout(function () {
-                    $this.removeClass('active');
-                },1000);
-                if(clickedid == "bubble-i-6"){
+            if($(window).width() > 768){
+                if(service_click_flag == 0){
+                    $this.addClass('active');
                     setTimeout(function () {
-                        $('#bubble-i-6').addClass('active');
-                    },1600);
-                    setTimeout(function () {
-                        $("#bubble-i-0").html($("#svg-hover-1-digital").html()).fadeIn();
-                        $('#bubble-i-0').addClass('active');
-                    },1700);
-                    setTimeout(function () {
-                        $("#bubble-i-7").html($("#svg-hover-2-digital").html()).fadeIn();
-                        $('#bubble-i-7').addClass('active');
-                    },1800);
-                    setTimeout(function () {
-                        $("#bubble-i-1").html($("#svg-hover-3-digital").html()).fadeIn();
-                        $('#bubble-i-1').addClass('active');
-                    },1900);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-4-digital").html()).fadeIn();
-                        $('#bubble-i-8').addClass('active');
-                    },2100);
-                }
-                if(clickedid == "bubble-i-0"){
-                    setTimeout(function () {
-                        $('#bubble-i-0').addClass('active');
-                    },1600);
-                    setTimeout(function () {
-                        $("#bubble-i-7").html($("#svg-hover-1-digital1").html()).fadeIn();
-                        $('#bubble-i-7').addClass('active');
-                    },1700);
-                    setTimeout(function () {
-                        $("#bubble-i-1").html($("#svg-hover-2-digital1").html()).fadeIn();
-                        $('#bubble-i-1').addClass('active');
-                    },1800);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-3-digital1").html()).fadeIn();
-                        $('#bubble-i-8').addClass('active');
-                    },1900);
-                    setTimeout(function () {
-                        $("#bubble-i-6").html($("#svg-hover-4-digital1").html()).fadeIn();
-                        $('#bubble-i-6').addClass('active');
-                    },2100);
-                }
-                if(clickedid == "bubble-i-7"){
-                    setTimeout(function () {
-                        $('#bubble-i-7').addClass('active');
-                    },1600);
+                        $this.removeClass('active');
+                    },1000);
+                    if(clickedid == "bubble-i-6"){
+                        setTimeout(function () {
+                            $('#bubble-i-6').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#bubble-i-0").html($("#svg-hover-1-digital").html()).fadeIn();
+                            $('#bubble-i-0').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#bubble-i-7").html($("#svg-hover-2-digital").html()).fadeIn();
+                            $('#bubble-i-7').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#bubble-i-1").html($("#svg-hover-3-digital").html()).fadeIn();
+                            $('#bubble-i-1').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-4-digital").html()).fadeIn();
+                            $('#bubble-i-8').addClass('active');
+                        },2100);
+                    }
+                    if(clickedid == "bubble-i-0"){
+                        setTimeout(function () {
+                            $('#bubble-i-0').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#bubble-i-7").html($("#svg-hover-1-digital1").html()).fadeIn();
+                            $('#bubble-i-7').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#bubble-i-1").html($("#svg-hover-2-digital1").html()).fadeIn();
+                            $('#bubble-i-1').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-3-digital1").html()).fadeIn();
+                            $('#bubble-i-8').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#bubble-i-6").html($("#svg-hover-4-digital1").html()).fadeIn();
+                            $('#bubble-i-6').addClass('active');
+                        },2100);
+                    }
+                    if(clickedid == "bubble-i-7"){
+                        setTimeout(function () {
+                            $('#bubble-i-7').addClass('active');
+                        },1600);
 
-                    setTimeout(function () {
-                        $("#bubble-i-1").html($("#svg-hover-2-digital2").html()).fadeIn();
-                        $('#bubble-i-1').addClass('active');
-                    },1700);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
-                        $('#bubble-i-8').addClass('active');
-                    },1800);
-                    setTimeout(function () {
-                        $("#bubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
-                        $('#bubble-i-6').addClass('active');
-                    },1900);
-                    setTimeout(function () {
-                        $("#bubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
-                        $('#bubble-i-0').addClass('active');
-                    },2000);
-                }
-                if(clickedid == "bubble-i-1"){
-                    setTimeout(function () {
-                        $('#bubble-i-1').addClass('active');
-                    },1600);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
-                        $('#bubble-i-8').addClass('active');
-                    },1700);
-                    setTimeout(function () {
-                        $("#bubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
-                        $('#bubble-i-6').addClass('active');
-                    },1800);
-                    setTimeout(function () {
-                        $("#bubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
-                        $('#bubble-i-0').addClass('active');
-                    },1900);
-                    setTimeout(function () {
-                        $("#bubble-i-7").html($("#svg-hover-5-digital2").html()).fadeIn();
-                        $('#bubble-i-7').addClass('active');
-                    },2000);
-                    setTimeout(function () {
-                        $('#bubble-i-1').addClass('active');
-                    },2600);
-                }
-                service_click_flag = 1;
-            }else{
-                if(clickedid == "bubble-i-6"){
-                    setTimeout(function () {
-                        $('#bubble-i-6').removeClass('active');
-                    },600);
-                    setTimeout(function () {
-                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
-                        $('#bubble-i-0').removeClass('active');
-                    },700);
-                    setTimeout(function () {
-                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
-                        $('#bubble-i-7').removeClass('active');
-                    },800);
-                    setTimeout(function () {
-                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
-                        $('#bubble-i-1').removeClass('active');
-                    },900);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
-                        $('#bubble-i-8').removeClass('active');
-                    },1000);
-                    setTimeout(function () {
-                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
-                        $('#bubble-i-6').addClass('active');
-                    },1600);
-                    setTimeout(function () {
-                        $('#bubble-i-6').removeClass('active');
-                    },2600);
-                }
-                if(clickedid == "bubble-i-0"){
-                    setTimeout(function () {
-                        $('#bubble-i-0').removeClass('active');
-                    },600);
+                        setTimeout(function () {
+                            $("#bubble-i-1").html($("#svg-hover-2-digital2").html()).fadeIn();
+                            $('#bubble-i-1').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
+                            $('#bubble-i-8').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#bubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
+                            $('#bubble-i-6').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#bubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
+                            $('#bubble-i-0').addClass('active');
+                        },2000);
+                    }
+                    if(clickedid == "bubble-i-1"){
+                        setTimeout(function () {
+                            $('#bubble-i-1').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
+                            $('#bubble-i-8').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#bubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
+                            $('#bubble-i-6').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#bubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
+                            $('#bubble-i-0').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#bubble-i-7").html($("#svg-hover-5-digital2").html()).fadeIn();
+                            $('#bubble-i-7').addClass('active');
+                        },2000);
+                        setTimeout(function () {
+                            $('#bubble-i-1').addClass('active');
+                        },2600);
+                    }
+                    service_click_flag = 1;
+                }else {
+                    if (clickedid == "bubble-i-6") {
+                        setTimeout(function () {
+                            $('#bubble-i-6').removeClass('active');
+                        }, 600);
+                        setTimeout(function () {
+                            $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#bubble-i-0').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#bubble-i-7').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#bubble-i-1').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#bubble-i-8').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#bubble-i-6').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#bubble-i-6').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "bubble-i-0") {
+                        setTimeout(function () {
+                            $('#bubble-i-0').removeClass('active');
+                        }, 600);
 
-                    setTimeout(function () {
-                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
-                        $('#bubble-i-7').removeClass('active');
-                    },700);
-                    setTimeout(function () {
-                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
-                        $('#bubble-i-1').removeClass('active');
-                    },800);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
-                        $('#bubble-i-8').removeClass('active');
-                    },900);
-                    setTimeout(function () {
-                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
-                        $('#bubble-i-6').removeClass('active');
-                    },1000);
-                    setTimeout(function () {
-                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
-                        $('#bubble-i-0').addClass('active');
-                    },1600);
-                    setTimeout(function () {
-                        $('#bubble-i-0').removeClass('active');
-                    },2600);
-                }
-                if(clickedid == "bubble-i-7"){
-                    setTimeout(function () {
-                        $('#bubble-i-7').removeClass('active');
-                    },600);
+                        setTimeout(function () {
+                            $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#bubble-i-7').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#bubble-i-1').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#bubble-i-8').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#bubble-i-6').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#bubble-i-0').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#bubble-i-0').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "bubble-i-7") {
+                        setTimeout(function () {
+                            $('#bubble-i-7').removeClass('active');
+                        }, 600);
 
+                        setTimeout(function () {
+                            $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#bubble-i-1').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#bubble-i-8').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#bubble-i-6').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#bubble-i-0').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#bubble-i-7').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#bubble-i-7').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "bubble-i-1") {
+                        setTimeout(function () {
+                            $('#bubble-i-1').removeClass('active');
+                        }, 600);
+                        setTimeout(function () {
+                            $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#bubble-i-8').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#bubble-i-6').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#bubble-i-0').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#bubble-i-7').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#bubble-i-1').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#bubble-i-1').removeClass('active');
+                        }, 2600);
+                    }
                     setTimeout(function () {
-                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
-                        $('#bubble-i-1').removeClass('active');
-                    },700);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
-                        $('#bubble-i-8').removeClass('active');
-                    },800);
-                    setTimeout(function () {
-                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
-                        $('#bubble-i-6').removeClass('active');
-                    },900);
-                    setTimeout(function () {
-                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
-                        $('#bubble-i-0').removeClass('active');
-                    },1000);
-                    setTimeout(function () {
-                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
-                        $('#bubble-i-7').addClass('active');
-                    },1600);
-                    setTimeout(function () {
-                        $('#bubble-i-7').removeClass('active');
-                    },2600);
+                        service_click_flag = 0;
+                    }, 3000);
+
                 }
-                if(clickedid == "bubble-i-1"){
-                    setTimeout(function () {
-                        $('#bubble-i-1').removeClass('active');
-                    },600);
-                    setTimeout(function () {
-                        $("#bubble-i-8").html($("#svg-hover-5").html()).fadeIn();
-                        $('#bubble-i-8').removeClass('active');
-                    },700);
-                    setTimeout(function () {
-                        $('#bubble-i-6').html($("#svg-hover-1").html()).fadeIn();
-                        $('#bubble-i-6').removeClass('active');
-                    },800);
-                    setTimeout(function () {
-                        $("#bubble-i-0").html($("#svg-hover-2").html()).fadeIn();
-                        $('#bubble-i-0').removeClass('active');
-                    },900);
-                    setTimeout(function () {
-                        $("#bubble-i-7").html($("#svg-hover-3").html()).fadeIn();
-                        $('#bubble-i-7').removeClass('active');
-                    },1000);
-                    setTimeout(function () {
-                        $("#bubble-i-1").html($("#svg-hover-4").html()).fadeIn();
-                        $('#bubble-i-1').addClass('active');
-                    },1600);
-                    setTimeout(function () {
-                        $('#bubble-i-1').removeClass('active');
-                    },2600);
-                }
-                service_click_flag = 0;
             }
             // if($(this).hasClass("active"))
             // {
@@ -779,12 +783,14 @@
         $("#enterprise  #ebubble"+_id2).clone().attr("id", "ebubble-i-6").addClass("dbubble").appendTo("#enterprise .bubble-wrap").hide();
         $("#enterprise  #ebubble"+_id).clone().attr("id", "ebubble-i-0").addClass("dbubble").addClass("open-hover-left").appendTo("#enterprise .bubble-wrap").hide();
         $("#enterprise  #ebubble7").clone().attr("id", "ebubble-i-7").addClass("dbubble").appendTo("#enterprise .bubble-wrap").hide();
+        $("#enterprise  #ebubble8").clone().attr("id", "ebubble-i-8").addClass("dbubble").appendTo("#enterprise .bubble-wrap").hide();
         $("#enterprise  #ebubble"+_id3).clone().attr("id", "ebubble-i-1").addClass("dbubble").addClass("open-hover-left").appendTo("#enterprise .bubble-wrap").hide();
 
         $("#ebubble-i-6").html($("#svg-hover-e1").html()).fadeIn();
         $("#ebubble-i-0").html($("#svg-hover-e2").html()).fadeIn();
         $("#ebubble-i-7").html($("#svg-hover-e3").html()).fadeIn();
         $("#ebubble-i-1").html($("#svg-hover-e4").html()).fadeIn();
+        $("#ebubble-i-8").html($("#svg-hover-e5").html()).fadeIn();
 
         setTimeout(function () {
             // reinitialize the Typed animation on EnterPrise
@@ -814,29 +820,273 @@
             },1000)
 
         }, 2000);
+        var service_enterprise_click_flag = 0;
+        $(".dbubble", "#enterprise").hover(function() {
+            var $this = $(this);
+            var position = $this.position();
+            var width_ = ($(window).width() / 2);
+            if(service_enterprise_click_flag == 0){
+                if($(this).hasClass("active"))
+                {
+                    $(this).removeClass("active");
+                    if($(window).width() < 768)
+                        $('.bubble-wrap').css({transform:"translateX(0px)"});
+                }
+                else
+                {
+                    $(".dbubble").removeClass("active");
+                    $(this).addClass("active");
+                    if($(window).width() < 768)
+                        if(position.left < width_){
+                            $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
+                        }
+                        else{
+                            $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
+                        }
+                }
+            }
+
+        });
 
         $(".dbubble", "#enterprise").on("click", function() {
             var $this = $(this);
             var position = $this.position();
             var width_ = ($(window).width() / 2);
-            if($(this).hasClass("active"))
-            {
-                $(this).removeClass("active");
-                if($(window).width() < 768)
-                    $('.bubble-wrap').css({transform:"translateX(0px)"});
-            }
-            else
-            {
-                $(".dbubble").removeClass("active");
-                $(this).addClass("active");
-                if($(window).width() < 768)
-                    if(position.left < width_){
-                        $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
+            var clickedid = $(this).attr('id');
+            if($(window).width() > 768){
+                if(service_enterprise_click_flag == 0){
+                    $this.addClass('active');
+                    setTimeout(function () {
+                        $this.removeClass('active');
+                    },1000);
+                    if(clickedid == "ebubble-i-6"){
+                        setTimeout(function () {
+                            $('#ebubble-i-6').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#ebubble-i-0").html($("#svg-hover-1-digital").html()).fadeIn();
+                            $('#ebubble-i-0').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#ebubble-i-7").html($("#svg-hover-2-digital").html()).fadeIn();
+                            $('#ebubble-i-7').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#ebubble-i-1").html($("#svg-hover-3-digital").html()).fadeIn();
+                            $('#ebubble-i-1').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-4-digital").html()).fadeIn();
+                            $('#ebubble-i-8').addClass('active');
+                        },2100);
                     }
-                    else{
-                        $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
+                    if(clickedid == "ebubble-i-0"){
+                        setTimeout(function () {
+                            $('#ebubble-i-0').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#ebubble-i-7").html($("#svg-hover-1-digital1").html()).fadeIn();
+                            $('#ebubble-i-7').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#ebubble-i-1").html($("#svg-hover-2-digital1").html()).fadeIn();
+                            $('#ebubble-i-1').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-3-digital1").html()).fadeIn();
+                            $('#ebubble-i-8').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#ebubble-i-6").html($("#svg-hover-4-digital1").html()).fadeIn();
+                            $('#ebubble-i-6').addClass('active');
+                        },2100);
                     }
+                    if(clickedid == "ebubble-i-7"){
+                        setTimeout(function () {
+                            $('#ebubble-i-7').addClass('active');
+                        },1600);
+
+                        setTimeout(function () {
+                            $("#ebubble-i-1").html($("#svg-hover-2-digital2").html()).fadeIn();
+                            $('#ebubble-i-1').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
+                            $('#ebubble-i-8').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#ebubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
+                            $('#ebubble-i-6').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#ebubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
+                            $('#ebubble-i-0').addClass('active');
+                        },2000);
+                    }
+                    if(clickedid == "ebubble-i-1"){
+                        setTimeout(function () {
+                            $('#ebubble-i-1').addClass('active');
+                        },1600);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-3-digital2").html()).fadeIn();
+                            $('#ebubble-i-8').addClass('active');
+                        },1700);
+                        setTimeout(function () {
+                            $("#ebubble-i-6").html($("#svg-hover-4-digital2").html()).fadeIn();
+                            $('#ebubble-i-6').addClass('active');
+                        },1800);
+                        setTimeout(function () {
+                            $("#ebubble-i-0").html($("#svg-hover-1-digital2").html()).fadeIn();
+                            $('#ebubble-i-0').addClass('active');
+                        },1900);
+                        setTimeout(function () {
+                            $("#ebubble-i-7").html($("#svg-hover-5-digital2").html()).fadeIn();
+                            $('#ebubble-i-7').addClass('active');
+                        },2000);
+                        setTimeout(function () {
+                            $('#ebubble-i-1').addClass('active');
+                        },2600);
+                    }
+                    service_enterprise_click_flag = 1;
+                }else{
+                    if (clickedid == "ebubble-i-6") {
+                        setTimeout(function () {
+                            $('#ebubble-i-6').removeClass('active');
+                        }, 600);
+                        setTimeout(function () {
+                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#ebubble-i-0').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#ebubble-i-7').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#ebubble-i-1').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#ebubble-i-8').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#ebubble-i-6').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "ebubble-i-0") {
+                        setTimeout(function () {
+                            $('#ebubble-i-0').removeClass('active');
+                        }, 600);
+
+                        setTimeout(function () {
+                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#ebubble-i-7').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#ebubble-i-1').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#ebubble-i-8').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#ebubble-i-0').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#ebubble-i-0').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "ebubble-i-7") {
+                        setTimeout(function () {
+                            $('#ebubble-i-7').removeClass('active');
+                        }, 600);
+
+                        setTimeout(function () {
+                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#ebubble-i-1').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#ebubble-i-8').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#ebubble-i-0').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#ebubble-i-7').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#ebubble-i-7').removeClass('active');
+                        }, 2600);
+                    }
+                    if (clickedid == "ebubble-i-1") {
+                        setTimeout(function () {
+                            $('#ebubble-i-1').removeClass('active');
+                        }, 600);
+                        setTimeout(function () {
+                            $("#ebubble-i-8").html($("#svg-hover-5").html()).fadeIn();
+                            $('#ebubble-i-8').removeClass('active');
+                        }, 700);
+                        setTimeout(function () {
+                            $('#ebubble-i-6').html($("#svg-hover-1").html()).fadeIn();
+                            $('#ebubble-i-6').removeClass('active');
+                        }, 800);
+                        setTimeout(function () {
+                            $("#ebubble-i-0").html($("#svg-hover-2").html()).fadeIn();
+                            $('#ebubble-i-0').removeClass('active');
+                        }, 900);
+                        setTimeout(function () {
+                            $("#ebubble-i-7").html($("#svg-hover-3").html()).fadeIn();
+                            $('#ebubble-i-7').removeClass('active');
+                        }, 1000);
+                        setTimeout(function () {
+                            $("#ebubble-i-1").html($("#svg-hover-4").html()).fadeIn();
+                            $('#ebubble-i-1').addClass('active');
+                        }, 1600);
+                        setTimeout(function () {
+                            $('#ebubble-i-1').removeClass('active');
+                        }, 2600);
+                    }
+                    setTimeout(function () {
+                        service_enterprise_click_flag = 0;
+                    }, 3000);
+
+                }
             }
+            // if($(this).hasClass("active"))
+            // {
+            //     $(this).removeClass("active");
+            //     if($(window).width() < 768)
+            //         $('.bubble-wrap').css({transform:"translateX(0px)"});
+            // }
+            // else
+            // {
+            //     $(".dbubble").removeClass("active");
+            //     $(this).addClass("active");
+            //     if($(window).width() < 768)
+            //         if(position.left < width_){
+            //             $('.bubble-wrap').css({transform:"translateX("+width_ / 2+"px)"});
+            //         }
+            //         else{
+            //             $('.bubble-wrap').css({transform:"translateX(-"+width_ / 2+"px)"});
+            //         }
+            // }
         });
 
     });
