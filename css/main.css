@@ -1501,7 +1501,7 @@ visibility: visible
     .contact_active .contact-link{display: none;}
     .bubble-wrap3 .digital-hover-panel div,.bubble-wrap3 .digital-hover-panel h4{ font-size: 13px; padding-top: 24px;}
     .nbubble.active .digital-hover-icon span { position: relative; z-index: 9; }
-    .our-solution-btn {width: 60px; height: 60px; margin-top: 50px;left: 12px;}
+    .our-solution-btn {width: 60px; height: 60px; left: 12px;}
     #about .nbubble.active .digital-hover-panel{max-width: 202px;}
     .pbubble .digital-hover-panel > div, .abubble .digital-hover-panel > div, .digital-hover-panel div{font-size: 13px; line-height: 15px;}
     .info-container { max-width: 90%; left: 0; right: 0; margin: 0 auto; display: block; width: 100%; }

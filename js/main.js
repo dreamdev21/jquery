@@ -79,6 +79,7 @@
     var original_center_menu_icon_second_left =  $('.center-menu-icon2').position().left;
     var original_center_menu_icon_third_left =  $('.center-menu-icon3').position().left;
     var our_solution_btn_left = $('.our-solution-btn').position().left;
+    var original_center_menu_left = $('.center-menu').position().left;
     var our_solution_btn_top = $('.our-solution-btn').position().top;
     $('.page-nav-banner').hover(function () {
         if ($(this).hasClass('about_btn')) {
@@ -95,7 +96,6 @@
             $('#about').toggleClass('open_nav');
         }else{
             if($(this).hasClass('our-solution-btn')){
-                console.log(original_center_menu_icon_top);
                 setTimeout(function () {
                     $('.center-menu-icon1').css('display','flex');
                     $('.center-menu-icon2').css('display','flex');
@@ -125,7 +125,7 @@
                 },300);
                 setTimeout(function () {
                     $('.center-menu').css('display','block');
-                },100);
+                },200);
 
                 $('.center-menu').css('animation-name','zoomIn');
                 $('.about-link').css('display','block');
@@ -173,7 +173,7 @@
                 $('#digital, #enterprise, #contact, #about, #product').removeClass('active');
                 $('body').removeClass('contact_active');
                 $(".page-nav-banner.sub-button").removeClass('active');
-                $('.main-section').removeClass('inner_page')
+                $('.main-section').removeClass('inner_page');
 
                 setTimeout(function () {
                     $('.main-left').stop().animate({
@@ -1168,8 +1168,8 @@
         },300);
         setTimeout(function () {
             if(width > 960){
-                $('.center-menu').css({ 'left': $('.center-menu').position().left + 'px' }).animate({
-                    'left' : '-'+($('.center-menu').position().left-our_solution_btn_left + ($('.center-menu-logo').width()-180))+'px'
+                $('.center-menu').css({ 'left': $('.center-menu').position().right + 'px' }).animate({
+                    'left' : '-'+($(window).width()/2-180)+'px'
                 },300);
             }else{
                 $('.center-menu').css({ 'right': '', 'left': $('.center-menu').position().right + 'px' }).animate({
