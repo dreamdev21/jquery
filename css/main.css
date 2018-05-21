@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
     display: list-item;          /* This has to be "list-item"                                               */
     list-style-type: disc;       /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type     */
     list-style-position: inside; /* See https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position */
-
+    margin-left: -31px;
 }
 .main-top-menu.active{
     display: none !important;
@@ -1285,6 +1285,101 @@ visibility: visible
 #about.open_nav .page-nav-banner.sub-button2{top: 40px !important;}
 #about.open_nav .page-nav-banner.sub-button3{top: 100px !important;}
 
+/* Main Menu */
+.main-nav-banner{
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    color: #fff !important;
+    justify-content: center;
+    font-size: 1.7rem;
+    transition: .5s;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    z-index: 19;
+    align-items: flex-end;
+    padding-bottom: 40px;
+}
+.main-nav-banner.about_btn.main-button {
+    top: 100px;
+    z-index: 15;
+}
+.main-nav-banner.sub-button{
+    padding-bottom: 20px;
+    transform: translate(-50%,-50%);
+    z-index: 18;
+    height: 350px;
+    border-radius: 300px;
+    top: -100px;
+    transition: all 750ms ease-out;
+}
+.main-nav-banner.about_btn.sub-button {
+    top: -100px;
+    z-index: 14;
+}
+.main-nav-banner.sub-button2{
+    height: 350px;
+    z-index: 17;
+    transform: translate(-50%,-50%);
+}
+.main-nav-banner.about_btn.sub-button2{
+    z-index: 13;
+}
+.main-nav-banner.sub-button3{
+    height: 350px;
+    z-index: 16;
+    transform: translate(-50%,-50%);
+}
+.main-nav-banner.about_btn.sub-button3{
+    z-index: 12;
+}
+body .main-nav-banner.about_btn.main-button{background: #F79E02}
+body .main-nav-banner.about_btn.sub-button{ background: #DB6F0E}
+body .main-nav-banner.about_btn.sub-button.sub-button2{background: #EA821B}
+body .main-nav-banner.about_btn.sub-button.sub-button3{background: #E28F20}
+body .main-nav-banner.solution_btn.main-button{background: #23768c}
+body .main-nav-banner.solution_btn.sub-button{ background: #23a9d8}
+body .main-nav-banner.solution_btn.sub-button.sub-button2{background: #00adba}
+body .main-nav-banner.solution_btn.sub-button.sub-button3{background: #4ec6c6}
+
+body .main-nav-banner.about_btn{
+    text-align: -webkit-center;
+    font-size: 18px;
+}
+body .main-nav-banner.solution_btn{
+    text-align: -webkit-center;
+    font-size: 18px;
+}
+body .main-nav-banner.about_btn.main-button {
+    font-size: 24px;
+}
+body .main-nav-banner.solution_btn.main-button {
+    font-size: 24px;
+}
+body .main-nav-banner {visibility: hidden;}
+body.solution_open_nav .main-nav-banner {visibility: visible;}
+body.solution_open_nav .main-nav-banner.solution_btn.sub-button1{top: 20px !important;}
+body.solution_open_nav .main-nav-banner.solution_btn.sub-button2{top: 90px !important;}
+body.solution_open_nav .main-nav-banner.solution_btn.sub-button3{top: 160px !important;}
+body.solution_open_nav .main-nav-banner.about_btn.main-button{top: 320px !important;}
+body.solution_open_nav .main-nav-banner.about_btn.sub-button1{top: -20px !important;}
+body.solution_open_nav .main-nav-banner.about_btn.sub-button2{top: -20px !important;}
+body.solution_open_nav .main-nav-banner.about_btn.sub-button3{top: -20px !important;}
+body.about_open_nav .main-nav-banner {visibility: visible;}
+body.about_open_nav .main-nav-banner.about_btn.main-button{top: 100px !important;}
+body.about_open_nav .main-nav-banner.about_btn.sub-button1{top: 100px !important;}
+body.about_open_nav .main-nav-banner.about_btn.sub-button2{top: 160px !important;}
+body.about_open_nav .main-nav-banner.about_btn.sub-button3{top: 220px !important;}
+body.about_open_nav .main-nav-banner.solution_btn.sub-button1{top: -70px !important;}
+body.about_open_nav .main-nav-banner.solution_btn.sub-button2{top: -70px !important;}
+body.about_open_nav .main-nav-banner.solution_btn.sub-button3{top: -70px !important;}
 @media only screen and (min-width:1025px) and (max-width:1660px)
 {
     #digital .bubble-wrap, #enterprise .bubble-wrap, #product .bubble-wrap{   overflow: hidden;
@@ -1316,6 +1411,10 @@ visibility: visible
     #about .page-nav-banner.sub-button{font-size: 1.3rem}
     /*#digital, #enterprise, #product{overflow-y: auto;}*/
     .page-nav-banner.sub-button.active{top: -20px;}
+    /* .main-nav-banner, .center-menu-icon{height: 230px; width: 230px;padding-bottom: 30px;}
+    body .main-nav-banner.sub-button{font-size: 1.3rem} */
+    .main-nav-banner {margin-left: -20px;}
+    .main-top-menu {margin-left: -50px;}
 }
 @media only screen and (min-width:1400px) and (max-width:1660px)
 {
@@ -1516,6 +1615,8 @@ visibility: visible
     .main-right{transition: 0.5s ease all; transition-delay: 1s;}
     #about.open_nav .page-nav-banner.sub-button1 {top: 0px !important;}
     #about.open_nav .page-nav-banner.sub-button3 {top: 90px !important;}
+    /* .main-nav-banner{width: 140px; height: 140px; font-size: 14px; padding-bottom: 20px;}
+    .main-nav-banner.sub-button{ height: 200px; width: 140px; font-size: 13px;} */
 }
 
 @media only screen and (min-width:425px) and (max-width:1024px) and (max-height:425px)
@@ -1544,7 +1645,33 @@ visibility: visible
     .center-menu-icon1, .center-menu-icon2, .center-menu-icon3{
         line-height: 1rem;
     }
+    body .main-nav-banner{
+        line-height: 1rem;
+    }
+    .main-nav-banner{width: 140px; height: 140px; font-size: 14px; padding-bottom: 20px;}
+    .main-nav-banner.sub-button{ height: 200px; width: 140px; font-size: 13px;}
+    body .main-nav-banner.about_btn.main-button{top: 50px !important;}
+    body.solution_open_nav .main-nav-banner.solution_btn.sub-button1{top: 10px !important;}
+    body.solution_open_nav .main-nav-banner.solution_btn.sub-button2{top: 70px !important;}
+    body.solution_open_nav .main-nav-banner.solution_btn.sub-button3{top: 140px !important;}
+    body.solution_open_nav .main-nav-banner.about_btn.main-button{top: 240px !important;}
+    body.solution_open_nav .main-nav-banner.about_btn.sub-button1{top: -20px !important;}
+    body.solution_open_nav .main-nav-banner.about_btn.sub-button2{top: -20px !important;}
+    body.solution_open_nav .main-nav-banner.about_btn.sub-button3{top: -20px !important;}
 
+    body.about_open_nav .main-nav-banner.solution_btn.sub-button1{top: -100px !important;}
+    body.about_open_nav .main-nav-banner.solution_btn.sub-button2{top: -100px !important;}
+    body.about_open_nav .main-nav-banner.solution_btn.sub-button3{top: -100px !important;}
+    body.about_open_nav .main-nav-banner.about_btn.main-button{top: 50px !important;}
+    body.about_open_nav .main-nav-banner.about_btn.sub-button1{top: 50px !important;}
+    body.about_open_nav .main-nav-banner.about_btn.sub-button2{top: 110px !important;}
+    body.about_open_nav .main-nav-banner.about_btn.sub-button3{top: 170px !important;}
+    body .main-nav-banner.about_btn.main-button {
+        font-size: 15px;
+    }
+    body .main-nav-banner.solution_btn.main-button {
+        font-size: 15px;
+    }
 }
 @media only screen and (max-width:321px){
     #job-form .contact-form{ margin-top: 180px; }

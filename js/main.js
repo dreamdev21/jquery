@@ -193,6 +193,15 @@
                 $('#about').removeClass('open_nav');
                 $('.our-solution-btn').removeClass('active');
                 $('#typed').fadeIn();
+                if($("#abubble-i-8").hasClass('active')) $("#abubble-i-8").trigger('click');
+                if($("#abubble-i-7").hasClass('active')) $("#abubble-i-7").trigger('click');
+                if($("#abubble-i-6").hasClass('active')) $("#abubble-i-6").trigger('click');
+                if($("#abubble-i-2").hasClass('active')) $("#abubble-i-2").trigger('click');
+                if($("#abubble-i-3").hasClass('active')) $("#abubble-i-3").trigger('click');
+                if($("#abubble-i-4").hasClass('active')) $("#abubble-i-4").trigger('click');
+                if($("#abubble-i-10").hasClass('active')) $("#abubble-i-10").trigger('click');
+                if($("#abubble-i-11").hasClass('active')) $("#abubble-i-11").trigger('click');
+                if($("#abubble-i-12").hasClass('active')) $("#abubble-i-12").trigger('click');
             }else{
                 $('.center-menu').css('animation-name','');
                 setTimeout(function () {
@@ -2453,3 +2462,101 @@ $(document).ready(function(){
 $('#contact .available-position').click(function(){
     $(this).parent().toggleClass('active')
 })
+
+var is_about_pop = false, is_closing = false;
+
+$('.main-top-menu').hover(function () {
+    if(is_closing) return;
+    if ($('body').hasClass('solution_open_nav') == false) {
+        $('body').addClass('solution_open_nav');
+    }
+});
+
+$('.main-nav-banner.solution_btn').hover(function () {
+    if(is_closing) return;
+    if ($('body').hasClass('solution_open_nav') == false) {
+        $('body').addClass('solution_open_nav');
+        $('body').removeClass('about_open_nav');
+    }
+});
+$('.main-nav-banner.about_btn.main-button').hover(function () {
+    if(is_closing) return;
+    if ($('body').hasClass('about_open_nav') == false) {
+        $('body').addClass('about_open_nav');
+        $('body').removeClass('solution_open_nav');
+
+        is_about_pop = true;
+        setTimeout(function () {
+            is_about_pop = false;
+        }, 500);
+    }
+});
+
+$('body').mouseover(function (event) {
+    if(is_closing) return;
+    if ($(event.target).hasClass('main-nav-banner') || 
+        $(event.target).hasClass('main-top-menu')) {
+    } else {
+        if (is_about_pop == false) {
+            $('body').removeClass('solution_open_nav');
+            $('body').removeClass('about_open_nav');
+        }
+    }
+});
+$('.about_btn.sub-button1').click(function(){
+    is_closing = true;
+    setTimeout(function () {
+        is_closing = false;
+    }, 700);
+    $( "#about-btn" ).trigger( "click" );
+    $('#about').animate({scrollTop:'0'},1000);
+    $('body').removeClass('about_open_nav');
+    $('body').removeClass('solution_open_nav');
+});
+$('.about_btn.sub-button2').click(function(){
+    is_closing = true;
+    setTimeout(function () {
+        is_closing = false;
+    }, 700);
+    $( "#about-btn" ).trigger( "click" );
+    $('#about').animate({scrollTop:$('#about .bubble-wrap').height()+340},1000)
+    $('body').removeClass('about_open_nav');
+    $('body').removeClass('solution_open_nav');
+});
+$('.about_btn.sub-button3').click(function(){
+    is_closing = true;
+    setTimeout(function () {
+        is_closing = false;
+    }, 700);
+    $( "#about-btn" ).trigger( "click" );
+    $('#about').animate({scrollTop:($('#about .bubble-wrap').height()+$('#about .bubble-wrap').height()+($('#about .bubble-wrap').height())/2)+200},1000)
+    $('body').removeClass('about_open_nav');
+    $('body').removeClass('solution_open_nav');
+});
+$('.solution_btn.sub-button1').click(function(){
+    is_closing = true;
+    setTimeout(function () {
+        is_closing = false;
+    }, 700);
+    $('#digital-btn').trigger('click');
+    $('body').removeClass('about_open_nav');
+    $('body').removeClass('solution_open_nav');
+});
+$('.solution_btn.sub-button2').click(function(){
+    is_closing = true;
+    setTimeout(function () {
+        is_closing = false;
+    }, 700);
+    $('#enterprise-btn').trigger('click'); 
+    $('body').removeClass('about_open_nav');
+    $('body').removeClass('solution_open_nav');
+});
+$('.solution_btn.sub-button3').click(function(){
+    is_closing = true;
+    setTimeout(function () {
+        is_closing = false;
+    }, 700);
+    $('#product-btn').trigger('click');
+    $('body').removeClass('about_open_nav');
+    $('body').removeClass('solution_open_nav');
+});
